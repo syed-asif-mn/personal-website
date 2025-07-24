@@ -14,8 +14,6 @@ import {
   Moon,
   Sun,
   Award,
-  FileText,
-  Book,
   Code,
   Home,
   GraduationCap,
@@ -64,7 +62,6 @@ export default function Portfolio() {
 
   const sectionOrder: Section[] = ["home", "projects", "experience", "education", "skills"]
 
-  // Animated title rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % animatedTitles.length)
@@ -73,7 +70,6 @@ export default function Portfolio() {
     return () => clearInterval(interval)
   }, [animatedTitles.length])
 
-  // Simplified handle section change function
   const handleSectionChange = (section: Section) => {
     setActiveSection(section)
     if (section !== activeSection) {
@@ -399,9 +395,7 @@ export default function Portfolio() {
     }
   }
 
-  const handleViewCV = () => {
-    window.open("/assets/cv.pdf", "_blank")
-  }
+  const handleViewCV = () => window.open("/assets/cv.pdf", "_blank")
 
   const renderSection = () => {
     switch (activeSection) {
@@ -419,7 +413,6 @@ export default function Portfolio() {
                   Asif Syed
                 </h1>
 
-                {/* Animated Title */}
                 <div className="h-16 mb-6 flex items-center justify-center">
                   <h2
                     key={currentTitleIndex}
@@ -443,9 +436,7 @@ export default function Portfolio() {
                   make a meaningful impact.
                 </p>
 
-                <div
-                  className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
+                <div className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                   <Link
                     href="https://linkedin.com/in/syed-asif-mn"
                     target="_blank"
@@ -473,12 +464,12 @@ export default function Portfolio() {
                   <button
                     onClick={() => handleSectionChange("projects")}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${activeSection === "projects"
-                        ? isDarkMode
-                          ? "bg-gray-600 text-white shadow-sm"
-                          : "bg-gray-800 text-white shadow-sm"
-                        : isDarkMode
-                          ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                          : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                      ? isDarkMode
+                        ? "bg-gray-600 text-white shadow-sm"
+                        : "bg-gray-800 text-white shadow-sm"
+                      : isDarkMode
+                        ? "text-gray-300 hover:text-white hover:bg-gray-700"
+                        : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                       }`}
                   >
                     View Projects
@@ -487,8 +478,8 @@ export default function Portfolio() {
                   <button
                     onClick={handleViewCV}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${isDarkMode
-                        ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                        : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                      ? "text-gray-300 hover:text-white hover:bg-gray-700"
+                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                       }`}
                   >
                     View CV
@@ -550,8 +541,8 @@ export default function Portfolio() {
                                   key={techIndex}
                                   variant="outline"
                                   className={`rounded-lg px-2 py-0.5 text-xs ${isDarkMode
-                                      ? "border-gray-600 text-gray-300 hover:bg-gray-700"
-                                      : "border-gray-200 text-gray-600 hover:bg-gray-50"
+                                    ? "border-gray-600 text-gray-300 hover:bg-gray-700"
+                                    : "border-gray-200 text-gray-600 hover:bg-gray-50"
                                     }`}
                                 >
                                   {tech}
@@ -592,8 +583,8 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-gray-800"
-                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                    ? "text-gray-300 hover:text-white hover:bg-gray-800"
+                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                     }`}
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -657,8 +648,8 @@ export default function Portfolio() {
                               variant="ghost"
                               size="sm"
                               className={`rounded-lg ml-2 ${isDarkMode
-                                  ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                                  : "text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+                                ? "text-gray-400 hover:text-white hover:bg-gray-700"
+                                : "text-gray-500 hover:text-gray-700 hover:bg-gray-100"
                                 }`}
                               onClick={() => openModal(exp)}
                             >
@@ -682,7 +673,6 @@ export default function Portfolio() {
         ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
                   >
-                    {/* 🧷 Close Button */}
                     <div className="absolute top-3 right-3 z-10">
                       <button
                         onClick={() => setModalOpen(false)}
@@ -721,8 +711,6 @@ export default function Portfolio() {
                   </div>
                 </div>
               )}
-
-
 
               {/* Highlights Section */}
               <div>
@@ -776,7 +764,6 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              {/* Education Section */}
               <div className="mb-12">
                 <h3 className={`text-2xl font-medium mb-6 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Academic Background
@@ -935,27 +922,26 @@ export default function Portfolio() {
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${activeSection === item.id
-                    ? isDarkMode
-                      ? "bg-gray-600 text-white shadow-sm"
-                      : "bg-gray-800 text-white shadow-sm"
-                    : isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
+                  ? isDarkMode
+                    ? "bg-gray-600 text-white shadow-sm"
+                    : "bg-gray-800 text-white shadow-sm"
+                  : isDarkMode
+                    ? "text-gray-300 hover:text-white hover:bg-gray-700"
+                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                   }`}
               >
                 {item.label}
               </button>
             ))}
 
-            {/* Dark Mode Toggle in Navigation */}
             <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
               <Button
                 variant="ghost"
                 size="icon"
                 className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
-                    ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                  ? "text-gray-300 hover:text-white hover:bg-gray-700"
+                  : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                   }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}
               >
@@ -974,32 +960,29 @@ export default function Portfolio() {
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
           <div className="flex items-center justify-around px-2 py-2 gap-2">
-            {navigationItems.map((item) => {
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleSectionChange(item.id)}
-                  className={`flex flex-col items-center justify-center p-2 rounded-lg transition-all duration-300 flex-1 ${activeSection === item.id
-                      ? isDarkMode
-                        ? "bg-gray-600 text-white shadow-sm rounded-lg"
-                        : "bg-gray-800 text-white shadow-sm rounded-lg"
-                      : isDarkMode
-                        ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                        : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
-                    }`}
-                >
-                  {/* Render icons for mobile navigation */}
-                  {item.icon}
-                </button>
-              );
-            })}
-            {/* Dark Mode Toggle in Mobile Navigation */}
+            {navigationItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleSectionChange(item.id)}
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
+                  ? isDarkMode
+                    ? "bg-gray-600 text-white shadow-sm"
+                    : "bg-gray-800 text-white shadow-sm"
+                  : isDarkMode
+                    ? "text-gray-400 hover:text-white hover:bg-gray-700"
+                    : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+                  }`}
+              >
+                {item.icon}
+              </button>
+            ))}
+
             <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 rounded-lg transition-all duration-300 flex-1 ${isDarkMode
-                    ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                    : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
+                  ? "text-gray-400 hover:text-white hover:bg-gray-700"
+                  : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
                   }`}
               >
                 {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}
@@ -1011,6 +994,6 @@ export default function Portfolio() {
 
       {/* Main Content with bottom padding for mobile navigation */}
       <main className="transition-all duration-500 ease-in-out pb-16 md:pb-0 pt-0 sm:pt-8 md:pt-16">{renderSection()}</main>
-    </div>
+    </div >
   )
 }

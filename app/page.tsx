@@ -678,7 +678,7 @@ export default function Portfolio() {
       ${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
                 >
                   <div
-                    className={`relative rounded-lg shadow-xl max-w-md w-full transition-colors duration-300
+                    className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
         ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
                   >

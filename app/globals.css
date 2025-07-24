@@ -194,7 +194,6 @@
   transform: scale(1.1);
 }
 
-.nav-pill {
-  border-radius: 6px;
-  transition: all 0.3s ease;
+:root {
+  --radius: 6px; /* You can tweak this to match your design language */
 }

@@ -466,7 +466,7 @@ export default function Portfolio() {
                 </div>
 
                 <div
-                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 shadow-sm ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-sm ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
                     } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
                   style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                 >
@@ -678,7 +678,7 @@ export default function Portfolio() {
       ${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
                 >
                   <div
-                    className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
+                    className={`relative rounded-lg shadow-xl max-w-md w-full transition-colors duration-300
         ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
                   >
@@ -981,8 +981,8 @@ export default function Portfolio() {
                   onClick={() => handleSectionChange(item.id)}
                   className={`flex flex-col items-center justify-center p-2 rounded-lg transition-all duration-300 flex-1 ${activeSection === item.id
                       ? isDarkMode
-                        ? "bg-gray-600 text-white shadow-sm"
-                        : "bg-gray-800 text-white shadow-sm"
+                        ? "bg-gray-600 text-white shadow-sm rounded-lg"
+                        : "bg-gray-800 text-white shadow-sm rounded-lg"
                       : isDarkMode
                         ? "text-gray-400 hover:text-white hover:bg-gray-700"
                         : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"

@@ -131,7 +131,7 @@ export default function Portfolio() {
       description:
         "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
       tech: ["Python", "H2O", "Kaggle"],
-      impact:-
+      impact:
         "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
       image: "/assets/bike.svg",
       link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o"
@@ -491,7 +491,7 @@ export default function Portfolio() {
                   </button>
 
                   <button
-                    onClick={window.open("/assets/cv.pdf", "_blank")}
+                    onClick={()=>window.open("/assets/cv.pdf", "_blank")}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-gray-700"
                       : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"

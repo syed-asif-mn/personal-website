@@ -103,7 +103,7 @@ export default function Portfolio() {
       title: "Best",
       description:
         "A minimalistic web app featuring a handpicked collection of timeless song lyrics. Built for lovers of clean design and classic writing.",
-      tech: ["React", "Tailwind CSS", "Glitch"],
+      tech: ["React", "Tailwind", "Gist"],
       impact: "Offers a curated, personal archive of evergreen lyrics with a sleek UI.",
       image: "/assets/best.svg",
       link: "https://best-lyrics.stackblitz.io/"
@@ -123,7 +123,7 @@ export default function Portfolio() {
       description:
         "A visual reporting solution for Agile teams with Epic, Feature, and Defect tracking. Built to streamline sprint planning and project oversight.",
       tech: ["Power BI", "Azure Analytic Views", "Python", "Pandas", "Matplotlib"],
-      impact: "Deployed across 15+ teams within Siemens Healthineers (Advanced Therapies Division).",
+      impact: "Used by 15+ teams within Siemens Healthineers (Advanced Therapies Division) to track team metrics.",
       image: "/assets/chart.svg"
     },
     {

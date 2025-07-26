@@ -491,7 +491,7 @@ export default function Portfolio() {
                   </button>
 
                   <button
-                    onClick={()=>window.open("/assets/cv.pdf", "_blank")}
+                    onClick={() => window.open("/assets/cv.pdf", "_blank")}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-gray-700"
                       : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -849,15 +849,14 @@ export default function Portfolio() {
                                 {cert.date}
                               </span>
                               {cert.url && (
-                              <Badge
-                                onClick={() => window.open(cert.url, "_blank")}
-                                variant="outline"
-                                className={`text-xs ${
-                                  isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
-                                }`}
-                              >
-                                {cert.credentialId}
-                              </Badge>
+                                <Badge
+                                  onClick={() => window.open(cert.url, "_blank")}
+                                  variant="outline"
+                                  className={`text-xs cursor-pointer ${isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
+                                    }`}
+                                >
+                                  {cert.credentialId}
+                                </Badge>)}
                             </div>
                           </div>
                         </div>

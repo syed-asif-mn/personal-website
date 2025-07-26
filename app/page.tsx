@@ -447,8 +447,7 @@ export default function Portfolio() {
                 <p
                   className={`mb-6 font-light leading-relaxed text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                 >
-                  With 5+ years of experience in product engineering and innovation, I craft scalable solutions that
-                  make a meaningful impact.
+                  With 5+ years of hands-on experience in cloud-native and enterprise-grade solutions, powered by .NET, Angular, Azure, SQL Server and AWS.
                 </p>
 
                 <div className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>

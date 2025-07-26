@@ -131,7 +131,7 @@ export default function Portfolio() {
       description:
         "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
       tech: ["Python", "H2O", "Kaggle"],
-      impact:
+      impact:-
         "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
       image: "/assets/bike.svg",
       link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o"
@@ -237,34 +237,44 @@ export default function Portfolio() {
 
   const certifications = [
     {
-      name: "AWS Machine Learning Foundations",
-      issuer: "Udacity",
-      date: "2023",
-      credentialId: "ML-AWS",
+      name: "AWS DevOps Engineer Pro 2024: Mastering CI/CD Pipelines",
+      issuer: "SkillSoft",
+      date: "2025",
+      credentialId: "11104808",
+      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658"
+    },
+    {
+      name: "Deep Learning Specialization",
+      issuer: "Coursera",
+      date: "2020",
+      credentialId: "GDZA77AZUVRV",
+      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV"
     },
     {
       name: "Data Structures & Algorithms",
       issuer: "Udacity",
-      date: "2023",
+      date: "2020",
       credentialId: "DSA-UD",
     },
     {
       name: "Secure Coding",
       issuer: "CodeBashing",
-      date: "2022",
+      date: "2025",
       credentialId: "SC-CB",
     },
     {
       name: "AI on Cloud",
       issuer: "Great Learning",
-      date: "2022",
-      credentialId: "AI-GL",
+      date: "2023",
+      credentialId: "JTWYHSGM",
+      url: "https://www.mygreatlearning.com/certificate/JTWYHSGM"
     },
     {
       name: "Scrum Product Owner",
       issuer: "Skillsoft",
-      date: "2022",
-      credentialId: "SPO-SS",
+      date: "2024",
+      credentialId: "10920581",
+      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/cacefea2-37c4-4574-8625-7356a4a4c7de"
     },
     {
       name: "Front-End Web Development",
@@ -332,6 +342,13 @@ export default function Portfolio() {
 
   const highlights = [
     {
+      title: "DAQ - Act as an Owner",
+      organization: "Nasdaq",
+      type: "Award",
+      icon: "🔷",
+      year: "2025"
+    },
+    {
       title: "Star of the Sprints",
       organization: "Siemens Healthineers",
       type: "Award",
@@ -394,8 +411,6 @@ export default function Portfolio() {
         return isDarkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-800"
     }
   }
-
-  const handleViewCV = () => window.open("/assets/cv.pdf", "_blank")
 
   const renderSection = () => {
     switch (activeSection) {
@@ -476,7 +491,7 @@ export default function Portfolio() {
                   </button>
 
                   <button
-                    onClick={handleViewCV}
+                    onClick={window.open("/assets/cv.pdf", "_blank")}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-gray-700"
                       : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -833,10 +848,13 @@ export default function Portfolio() {
                               <span className={`text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
                                 {cert.date}
                               </span>
+                              {cert.url && (
                               <Badge
+                                onClick={() => window.open(cert.url, "_blank")}
                                 variant="outline"
-                                className={`text-xs ${isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
-                                  }`}
+                                className={`text-xs ${
+                                  isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
+                                }`}
                               >
                                 {cert.credentialId}
                               </Badge>

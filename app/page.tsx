@@ -512,9 +512,6 @@ export default function Portfolio() {
                 <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Portfolio Showcase
                 </h2>
-                <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Product-focused solutions built with modern technologies and user-centered design
-                </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -619,9 +616,6 @@ export default function Portfolio() {
                 <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Professional Journey
                 </h2>
-                <p className={`text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  5+ years of product-focused technology experience
-                </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -773,9 +767,6 @@ export default function Portfolio() {
                 <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Education & Certifications
                 </h2>
-                <p className={`text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Academic background and professional certifications
-                </p>
               </div>
 
               <div className="mb-12">
@@ -876,9 +867,6 @@ export default function Portfolio() {
                 <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Skills Snapshot
                 </h2>
-                <p className={`text-lg mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Technical expertise across the full product development lifecycle
-                </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

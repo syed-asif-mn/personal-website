@@ -228,7 +228,7 @@ export default function Portfolio() {
     },
     {
       type: "degree",
-      title: "Bachelor of Engineering in Electronics & Communication,
+      title: "Bachelor of Engineering in Electronics & Communication",
       institution: "JSS Science and Technology University, Mysuru",
       period: "2016 - 2020",
       description: "CGPA: 9.14 / 10",

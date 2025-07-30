@@ -328,14 +328,27 @@ export default function Portfolio() {
       ],
     },
     {
-      category: "Others",
+      category: "Version Control",
       items: [
         { name: "Git", level: "Professional" },
+        { name: "TFS", level: "Professional" }       
+      ],
+    },
+    {
+      category: "Methodology",
+      items: [
+        { name: "Agile", level: "Professional" },
+        { name: "SAFE", level: "Professional" },
+        { name: "TDD", level: "Professional" },
+        { name: "BDD", level: "Professional" }
+      ],
+    },
+    {
+      category: "Others",
+      items: [
         { name: "LINQ", level: "Professional" },
         { name: "REST APIs", level: "Professional" },
-        { name: "Agile/SAFe", level: "Professional" },
-        { name: "BDD", level: "Professional" },
-        { name: "Entity Framework", level: "Intermediate" },
+        { name: "Entity Framework", level: "Intermediate" }
       ],
     },
   ]
@@ -508,12 +521,6 @@ export default function Portfolio() {
         return (
           <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-6xl mx-auto w-full">
-              <div className="text-center mb-12">
-                <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Portfolio Showcase
-                </h2>
-              </div>
-
               <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
                   <Card
@@ -612,11 +619,9 @@ export default function Portfolio() {
         return (
           <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-5xl mx-auto w-full">
-              <div className="text-center mb-12">
-                <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Professional Journey
-                </h2>
-              </div>
+                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                  Highlights & Awards
+                </h3>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {experiences.map((exp, index) => (
@@ -763,15 +768,9 @@ export default function Portfolio() {
         return (
           <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-6xl mx-auto w-full">
-              <div className="text-center mb-12">
-                <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Education & Certifications
-                </h2>
-              </div>
-
               <div className="mb-12">
-                <h3 className={`text-2xl font-medium mb-6 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Academic Background
+                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                  Certifications & Specializations
                 </h3>
                 <div className="space-y-6">
                   {education.map((edu, index) => (
@@ -811,7 +810,7 @@ export default function Portfolio() {
 
               {/* Certifications Section */}
               <div>
-                <h3 className={`text-2xl font-medium mb-6 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+              <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Certifications & Specializations
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -863,12 +862,6 @@ export default function Portfolio() {
         return (
           <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-6xl mx-auto w-full">
-              <div className="text-center mb-12">
-                <h2 className={`text-4xl md:text-5xl font-light mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Skills Snapshot
-                </h2>
-              </div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skills.map((skillGroup, index) => (
                   <Card

@@ -521,6 +521,9 @@ export default function Portfolio() {
       case "projects":
         return (
           <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
+          <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                  Portfolio Showcase
+                </h2>
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
@@ -620,9 +623,9 @@ export default function Portfolio() {
         return (
           <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-5xl mx-auto w-full">
-                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Professional Journey
-                </h3>
+                </h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {experiences.map((exp, index) => (
@@ -728,9 +731,9 @@ export default function Portfolio() {
 
               {/* Highlights Section */}
               <div>
-                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Highlights & Awards
-                </h3>
+                </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {highlights.map((highlight, index) => (
                     <Card
@@ -770,9 +773,9 @@ export default function Portfolio() {
           <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
-                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Academic Background
-                </h3>
+                </h2>
                 <div className="space-y-6">
                   {education.map((edu, index) => (
                     <Card

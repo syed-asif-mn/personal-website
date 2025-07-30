@@ -521,9 +521,9 @@ export default function Portfolio() {
       case "projects":
         return (
           <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
-          <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Portfolio Showcase
-                </h2>
+          <h2 className={`block md:hidden text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+        Portfolio Showcase
+            </h2>
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (

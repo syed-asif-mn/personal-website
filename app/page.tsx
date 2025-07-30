@@ -316,6 +316,7 @@ export default function Portfolio() {
         { name: "AWS", level: "Intermediate" },
         { name: "Azure DevOps", level: "Intermediate" },
         { name: "Docker", level: "Intermediate" },
+        { name: "Vercel", level: "Intermediate" },
       ],
     },
     {

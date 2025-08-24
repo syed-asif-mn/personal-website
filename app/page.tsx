@@ -151,7 +151,7 @@ export default function Portfolio() {
     {
       "company": "Nasdaq",
       "role": "Senior Software Developer",
-      "period": "Dec 2024 - Present",
+      "period": "Dec 2024 - July 2025",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
       "projects": [
         {

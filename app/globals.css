@@ -144,17 +144,6 @@
       opacity: 1;
     }
   }
-
-  /* Safe-area-aware padding helpers */
-  .pb-safe-nav {
-    padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
-  }
-  .pb-safe-nav-tighter {
-    padding-bottom: max(0px, calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px) - 1rem));
-  }
-  .pb-safe-area {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
 }
 
 /* Custom scrollbar for better aesthetics */
@@ -207,5 +196,4 @@
 
 :root {
   --radius: 6px;
-  --mobile-nav-height: 56px;
 }

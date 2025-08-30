@@ -429,7 +429,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 h-10/12 pb-28 sm:pb-32"
+            className="flex items-center justify-center min-h-screen px-8 pt-4 md:pt-0 h-10/12"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">
@@ -1021,7 +1021,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       {/* Main Content with bottom padding for mobile navigation */}
       <main
-        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-24 md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
+        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-12 md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
       >
         {renderSection()}
       </main>

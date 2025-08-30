@@ -429,10 +429,10 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0"
+            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 h-10/12"
           >
             <div className="text-center max-w-4xl mx-auto">
-              <div className="animate-fade-in">
+              <div className="animate-fade-in h-min">
                 <h1
                   className={`text-5xl font-light mb-6 leading-tight md:text-5xl ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 >
@@ -706,7 +706,7 @@ ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                       <button
                         onClick={() => setModalOpen(false)}
                         className={`p-1 rounded-full 
-    ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray-700"}`}
+${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray-700"}`}
                       >
                         <X className="w-5 h-5" />
                       </button>
@@ -719,7 +719,7 @@ ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     >
                       <h2
                         className={`text-lg font-semibold mb-4 mt-2 
-  ${isDarkMode ? "text-white" : "text-gray-900"}`}
+${isDarkMode ? "text-white" : "text-gray-900"}`}
                       >
                         {selectedExp.company}
                       </h2>
@@ -945,7 +945,7 @@ ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
           }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
-          <div className="flex gap-1 items-center">
+          <div className={`flex gap-1 items-center ${!isDarkMode ? "hover:bg-zinc-300" : ""}`}>
             {navigationItems.map((item) => (
               <button
                 key={item.id}
@@ -955,21 +955,23 @@ ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-700"
-                      : "text-gray-600 hover:text-white hover:bg-zinc-700"
+                      : "text-gray-600 hover:bg-zinc-300"
                 }`}
               >
-                {item.label}
+                <span className={!isDarkMode ? "hover:text-zinc-300" : ""}>{item.label}</span>
               </button>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
+            <div
+              className={`ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 ${!isDarkMode ? "hover:bg-zinc-300" : ""}`}
+            >
               <Button
                 variant="ghost"
                 size="icon"
                 className={`w-7 h-7 rounded-lg transition-all duration-300 ${
                   isDarkMode
                     ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                    : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-500 hover:text-white hover:bg-zinc-800"
                 }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}
               >
@@ -1020,7 +1022,11 @@ ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
       </nav>
 
       {/* Main Content with bottom padding for mobile navigation */}
-      <main className="transition-all duration-500 ease-in-out pb-4 pt-0 sm:pt-8 md:pt-16">{renderSection()}</main>
+      <main
+        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-24 md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
+      >
+        {renderSection()}
+      </main>
     </div>
   )
 }

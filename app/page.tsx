@@ -485,7 +485,7 @@ export default function Portfolio() {
                 </div>
 
                 <div
-                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 border-slate-50 shadow-md ${
+                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-md ${
                     isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
                   } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
                   style={isDarkMode ? { backgroundColor: "#41434B" } : {}}

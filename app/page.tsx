@@ -485,7 +485,7 @@ export default function Portfolio() {
                 </div>
 
                 <div
-                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-sm border-transparent ${
+                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 border-slate-50 shadow-md ${
                     isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
                   } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
                   style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
@@ -945,7 +945,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
           }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
-          <div className={`flex gap-1 items-center ${!isDarkMode ? "hover:bg-zinc-300" : ""}`}>
+          <div className="flex gap-1 items-center">
             {navigationItems.map((item) => (
               <button
                 key={item.id}
@@ -955,22 +955,20 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-700"
-                      : "text-gray-600 hover:bg-zinc-300"
+                      : "text-gray-600 hover:bg-zinc-200"
                 }`}
               >
-                <span className={!isDarkMode ? "hover:text-zinc-300" : ""}>{item.label}</span>
+                <span>{item.label}</span>
               </button>
             ))}
 
-            <div
-              className={`ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 ${!isDarkMode ? "hover:bg-zinc-300" : ""}`}
-            >
+            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
               <Button
                 variant="ghost"
                 size="icon"
                 className={`w-7 h-7 rounded-lg transition-all duration-300 ${
                   isDarkMode
-                    ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                    ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                     : "text-gray-500 hover:text-white hover:bg-zinc-800"
                 }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}

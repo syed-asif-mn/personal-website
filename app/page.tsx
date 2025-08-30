@@ -429,7 +429,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-4 md:pt-0 h-10/12"
+            className="flex items-center justify-center min-h-screen px-8 pt-3 md:pt-0 h-10/12"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">
@@ -521,7 +521,7 @@ export default function Portfolio() {
 
       case "projects":
         return (
-          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16">
+          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-2">
             <h2
               className={`block md:hidden text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
             >
@@ -630,7 +630,7 @@ export default function Portfolio() {
 
       case "experience":
         return (
-          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16">
+          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-2">
             <div className="max-w-5xl mx-auto w-full">
               <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Professional Journey
@@ -790,7 +790,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "education":
         return (
-          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16">
+          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-2">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
                 <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
@@ -889,7 +889,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "skills":
         return (
-          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16">
+          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-2">
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skills.map((skillGroup, index) => (
@@ -1020,9 +1020,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
       </nav>
 
       {/* Main Content with bottom padding for mobile navigation */}
-      <main
-        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-12 md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
-      >
+      <main className="transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-0 md:pb-0">
         {renderSection()}
       </main>
     </div>

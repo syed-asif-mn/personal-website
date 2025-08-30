@@ -441,7 +441,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-[calc(100dvh-var(--mobile-nav-height)-env(safe-area-inset-bottom,0px))] md:min-h-screen px-8 pt-0 md:pt-0"
+            className="flex items-center justify-center min-h-[calc(100dvh-var(--mobile-nav-height)-env(safe-area-inset-bottom,0px))] md:min-h-screen px-8 pt-2 md:pt-0"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">
@@ -966,8 +966,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                   activeSection === item.id
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-zinc-700"
-                      : "text-gray-600 hover:bg-zinc-200"
+                      ? "text-gray-300 bg-zinc-700/40 hover:text-white hover:bg-zinc-700"
+                      : "text-gray-700 bg-zinc-100 hover:bg-zinc-200"
                 }`}
               >
                 <span>{item.label}</span>
@@ -1002,7 +1002,9 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
                 activeSection === item.id
                   ? "bg-zinc-800 text-white shadow-sm"
-                  : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
+                  : isDarkMode
+                    ? "text-gray-300 bg-zinc-700/40 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-700 bg-zinc-100 hover:bg-zinc-200"
               }`}
             >
               {item.icon}

@@ -429,7 +429,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 h-10/12"
+            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 h-10/12 pb-28 sm:pb-32"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">

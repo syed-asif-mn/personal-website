@@ -18,7 +18,7 @@ import {
   Home,
   GraduationCap,
   PanelsTopLeft,
-  Route
+  Route,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -26,18 +26,18 @@ import Image from "next/image"
 type Section = "home" | "projects" | "experience" | "education" | "skills"
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState < Section > ("home")
+  const [activeSection, setActiveSection] = useState<Section>("home")
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
   const [isModalOpen, setModalOpen] = useState(false)
   const [selectedExp, setSelectedExp] = useState(null)
 
   const openModal = (exp) => {
-    setSelectedExp(exp);
-    setModalOpen(true);
-  };
+    setSelectedExp(exp)
+    setModalOpen(true)
+  }
 
-  const sectionRefs = useRef < { [key in Section]: HTMLDivElement | null } > ({
+  const sectionRefs = useRef<{ [key in Section]: HTMLDivElement | null }>({
     home: null,
     projects: null,
     experience: null,
@@ -57,8 +57,8 @@ export default function Portfolio() {
     "Continuous Learner",
     "System Design Enthusiast",
     "Test-Driven Developer",
-    "Mentor & Collaborator"
-  ];
+    "Mentor & Collaborator",
+  ]
 
   const sectionOrder: Section[] = ["home", "projects", "experience", "education", "skills"]
 
@@ -94,10 +94,9 @@ export default function Portfolio() {
       description:
         "An advanced, data-driven dashboard visualizing Telangana’s 2023 voter base. It provides granular demographic insights—by gender, age, and district—empowering political campaigns and researchers. Developed and funded by IIIT-Hyderabad for election analytics.",
       tech: ["Python", "Flask", "Streamlit", "Docker"],
-      impact:
-        "Delivered actionable insights from 20M+ voter records, enabling data-informed political strategies.",
+      impact: "Delivered actionable insights from 20M+ voter records, enabling data-informed political strategies.",
       image: "/assets/vote.svg",
-      link: "https://github.com/syed-asif-mn/Voter-CRM"
+      link: "https://github.com/syed-asif-mn/Voter-CRM",
     },
     {
       title: "Best",
@@ -106,7 +105,7 @@ export default function Portfolio() {
       tech: ["React", "Tailwind CSS", "Glitch"],
       impact: "Offers a curated, personal archive of evergreen lyrics with a sleek UI.",
       image: "/assets/best.svg",
-      link: "https://best-lyrics.stackblitz.io/"
+      link: "https://best-lyrics.stackblitz.io/",
     },
     {
       title: "unFold",
@@ -116,7 +115,7 @@ export default function Portfolio() {
       impact:
         "Ranked Top 5 at Airbus Aerothon 2022. Supports auto-generation for 4 server-side and 3 client-side frameworks.",
       image: "/assets/unfold.svg",
-      link: "https://unfold.stackblitz.io/"
+      link: "https://unfold.stackblitz.io/",
     },
     {
       title: "Agile Project Management Tool",
@@ -124,99 +123,97 @@ export default function Portfolio() {
         "A visual reporting solution for Agile teams with Epic, Feature, and Defect tracking. Built to streamline sprint planning and project oversight.",
       tech: ["Power BI", "Azure Analytic Views", "Python", "Pandas", "Matplotlib"],
       impact: "Deployed across 15+ teams within Siemens Healthineers (Advanced Therapies Division).",
-      image: "/assets/chart.svg"
+      image: "/assets/chart.svg",
     },
     {
       title: "Explainable AI with H2O",
       description:
         "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
       tech: ["Python", "H2O", "Kaggle"],
-      impact:
-        "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
+      impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
       image: "/assets/bike.svg",
-      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o"
+      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
     },
     {
       title: "Local Microservices Simulator",
       description:
         "An intuitive dashboard for retrieving and building Nasdaq OMNI microservices, enabling seamless containerization or local execution.",
       tech: ["Vue 3", "Powershell", "Docker"],
-      impact:
-        "Cut developer testing environment setup time from 30 minutes to under one minute.",
-      image: "/assets/dashboard.svg"
-    }
-  ];
+      impact: "Cut developer testing environment setup time from 30 minutes to under one minute.",
+      image: "/assets/dashboard.svg",
+    },
+  ]
 
   const experiences = [
     {
-      "company": "Nasdaq",
-      "role": "Senior Software Developer",
-      "period": "Dec 2024 - July 2025",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
-      "projects": [
+      company: "Nasdaq",
+      role: "Senior Software Developer",
+      period: "Dec 2024 - July 2025",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
+      projects: [
         {
-          "name": "eVestment OMNI",
-          "description": [
+          name: "eVestment OMNI",
+          description: [
             "Worked on eVestment OMNI microservice, leveraging a .NET server integrated with a SQL Server database, a Vue.js front-end, deployed on AWS cloud infrastructure.",
             "Engineered and maintained other 5+ microservices, enabling seamless feature rollouts and improving service isolation.",
             "Containerized microservices using Docker, accelerating development environments and reducing onboarding/setup time by ~80%.",
-            "Integrated services with Salesforce CRM, enabling real-time data syncing."
-          ]
-        }
-      ]
+            "Integrated services with Salesforce CRM, enabling real-time data syncing.",
+          ],
+        },
+      ],
     },
     {
-      "company": "Siemens Healthineers",
-      "role": "Software Developer",
-      "period": "Sept 2020 - Nov 2024",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
-      "projects": [
+      company: "Siemens Healthineers",
+      role: "Software Developer",
+      period: "Sept 2020 - Nov 2024",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
+      projects: [
         {
-          "name": "OnScreen Menu Configurator",
-          "description": [
+          name: "OnScreen Menu Configurator",
+          description: [
             "Developed a .NET microservice using REST methodology with MySQL integration via Fluent NHibernate, handling ~10K+ daily transactions.",
             "Optimized data querying with LINQ and applied SOLID principles across 20+ core classes to enhance scalability and maintainability.",
             "Automated SSIT (Server & Client) using .NET, Selenium, and SpecFlow (BDD), reducing manual test effort by ~80%.",
             "Designed Azure CI/CD pipelines for nightly build and test automation.",
             "Performed unit testing with MsTest (server) and Jasmine (client).",
             "Implemented modular Angular client architecture (v8 to v15).",
-            "Adhered to Scaled Agile methodologies throughout development."
-          ]
+            "Adhered to Scaled Agile methodologies throughout development.",
+          ],
         },
         {
-          "name": "Position List Editor",
-          "description": [
+          name: "Position List Editor",
+          description: [
             "Acted as Subsystem Product Owner—managed backlog of 50+ user stories and collaborated with UX/QT to refine scope.",
             "Integrated NgRx for efficient client-side state management using Angular.",
             "Automated client SSIT to achieve 95% coverage and enhance regression stability.",
             "Proposed and delivered 3 innovative features now adopted in production.",
-            "Mentored peers through workshops and knowledge transfer sessions."
-          ]
+            "Mentored peers through workshops and knowledge transfer sessions.",
+          ],
         },
         {
-          "name": "OnScreen Display",
-          "description": [
+          name: "OnScreen Display",
+          description: [
             "Led the migration of legacy UI to a modular design, elevating brand consistency and user experience.",
-            "Resolved 25+ defects, significantly improving release confidence and stability."
-          ]
-        }
-      ]
+            "Resolved 25+ defects, significantly improving release confidence and stability.",
+          ],
+        },
+      ],
     },
     {
-      "company": "Siemens Healthineers",
-      "role": "Intern",
-      "period": "Jan 2020 - May 2020",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
-      "projects": [
+      company: "Siemens Healthineers",
+      role: "Intern",
+      period: "Jan 2020 - May 2020",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
+      projects: [
         {
-          "name": "OnScreen Menu Configurator",
-          "description": [
-            "Automated ~35 On Screen display subsystem workflows using C#, Python and Selenium, reducing manual testing efforts from around 3 days to 3 hours."
-          ]
-        }
-      ]
-    }
-  ];
+          name: "OnScreen Menu Configurator",
+          description: [
+            "Automated ~35 On Screen display subsystem workflows using C#, Python and Selenium, reducing manual testing efforts from around 3 days to 3 hours.",
+          ],
+        },
+      ],
+    },
+  ]
 
   const education = [
     {
@@ -241,14 +238,14 @@ export default function Portfolio() {
       issuer: "SkillSoft",
       date: "2025",
       credentialId: "11104808",
-      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658"
+      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658",
     },
     {
       name: "Deep Learning Specialization",
       issuer: "Coursera",
       date: "2020",
       credentialId: "GDZA77AZUVRV",
-      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV"
+      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV",
     },
     {
       name: "Data Structures & Algorithms",
@@ -267,14 +264,14 @@ export default function Portfolio() {
       issuer: "Great Learning",
       date: "2023",
       credentialId: "JTWYHSGM",
-      url: "https://www.mygreatlearning.com/certificate/JTWYHSGM"
+      url: "https://www.mygreatlearning.com/certificate/JTWYHSGM",
     },
     {
       name: "Scrum Product Owner",
       issuer: "Skillsoft",
       date: "2024",
       credentialId: "10920581",
-      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/cacefea2-37c4-4574-8625-7356a4a4c7de"
+      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/cacefea2-37c4-4574-8625-7356a4a4c7de",
     },
     {
       name: "Front-End Web Development",
@@ -299,7 +296,7 @@ export default function Portfolio() {
       items: [
         { name: "Angular (v8-16)", level: "Professional" },
         { name: "Typescript", level: "Professional" },
-        { name: "Vue.js", level: "Beginner" }
+        { name: "Vue.js", level: "Beginner" },
       ],
     },
     {
@@ -332,7 +329,7 @@ export default function Portfolio() {
       category: "Version Control",
       items: [
         { name: "Git", level: "Professional" },
-        { name: "TFS", level: "Professional" }       
+        { name: "TFS", level: "Professional" },
       ],
     },
     {
@@ -341,7 +338,7 @@ export default function Portfolio() {
         { name: "Agile", level: "Professional" },
         { name: "SAFE", level: "Professional" },
         { name: "TDD", level: "Professional" },
-        { name: "BDD", level: "Professional" }
+        { name: "BDD", level: "Professional" },
       ],
     },
     {
@@ -349,7 +346,7 @@ export default function Portfolio() {
       items: [
         { name: "LINQ", level: "Professional" },
         { name: "REST APIs", level: "Professional" },
-        { name: "Entity Framework", level: "Intermediate" }
+        { name: "Entity Framework", level: "Intermediate" },
       ],
     },
   ]
@@ -360,56 +357,56 @@ export default function Portfolio() {
       organization: "Nasdaq",
       type: "Award",
       icon: "🔷",
-      year: "2025"
+      year: "2025",
     },
     {
       title: "Star of the Sprints",
       organization: "Siemens Healthineers",
       type: "Award",
       icon: "⭐",
-      year: "2024"
+      year: "2024",
     },
     {
       title: "Leadership Launchpad",
       organization: "Siemens Healthineers",
       type: "Mentorship Programme",
       icon: "❇️",
-      year: "2024"
+      year: "2024",
     },
     {
       title: "Hackathon Winner",
       organization: "IIITH PGCSEDS",
       type: "Competition",
       icon: "🏅",
-      year: "2022"
+      year: "2022",
     },
     {
       title: "Finalist - HackerEarth Aerothon",
       organization: "HackerEarth",
       type: "Competition",
       icon: "✈️",
-      year: "2022"
+      year: "2022",
     },
     {
       title: "AVM Analyzer POC selected for evaluation at SHIFT Hackathon",
       organization: "Siemens Healthineers",
       type: "Competition",
       icon: "🧠",
-      year: "2024"
+      year: "2024",
     },
     {
       title: "Volunteer - Project Rise",
       organization: "Save The Child NGO",
       type: "Volunteer",
       icon: "🧍",
-      year: "2021-23"
+      year: "2021-23",
     },
     {
       title: "Volunteer - Veteran Hiring Program",
       organization: "Siemens Healthineers",
       type: "Volunteer",
       icon: "🪖",
-      year: "2022-23"
+      year: "2022-23",
     },
   ]
 
@@ -432,7 +429,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 pb-16"
+            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in">
@@ -461,10 +458,13 @@ export default function Portfolio() {
                 <p
                   className={`mb-6 font-light leading-relaxed text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                 >
-                  With 5+ years of hands-on experience in cloud-native and enterprise-grade solutions, powered by .NET, Angular, Azure, SQL Server and AWS.
+                  With 5+ years of hands-on experience in cloud-native and enterprise-grade solutions, powered by .NET,
+                  Angular, Azure, SQL Server and AWS.
                 </p>
 
-                <div className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                <div
+                  className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                >
                   <Link
                     href="https://linkedin.com/in/syed-asif-mn"
                     target="_blank"
@@ -485,30 +485,31 @@ export default function Portfolio() {
                 </div>
 
                 <div
-                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-sm ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-                    } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
+                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-sm border-transparent ${
+                    isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+                  } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
                   style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                 >
                   <button
                     onClick={() => handleSectionChange("projects")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${activeSection === "projects"
-                      ? isDarkMode
-                        ? "bg-gray-600 text-white shadow-sm"
-                        : "bg-gray-800 text-white shadow-sm"
-                      : isDarkMode
-                        ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                        : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                      }`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${
+                      activeSection === "projects"
+                        ? "bg-zinc-800 text-white shadow-sm"
+                        : isDarkMode
+                          ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                          : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    }`}
                   >
                     View Projects
                   </button>
 
                   <button
                     onClick={() => window.open("/assets/cv.pdf", "_blank")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                      }`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${
+                      isDarkMode
+                        ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                        : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    }`}
                   >
                     View CV
                   </button>
@@ -520,17 +521,20 @@ export default function Portfolio() {
 
       case "projects":
         return (
-          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
-          <h2 className={`block md:hidden text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-        Portfolio Showcase
+          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16">
+            <h2
+              className={`block md:hidden text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
+            >
+              Portfolio Showcase
             </h2>
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
                   <Card
                     key={index}
-                    className={`group hover:shadow-xl flex items-center transition-all duration-700 hover:-translate-y-2 rounded-2xl overflow-hidden card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                    className={`group hover:shadow-xl flex items-center transition-all duration-700 hover:-translate-y-2 rounded-2xl overflow-hidden card-hover ${
+                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                    }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-0">
@@ -552,8 +556,9 @@ export default function Portfolio() {
                               {project.title}
                             </h3>
                             <p
-                              className={`mb-3 text-sm leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"
-                                }`}
+                              className={`mb-3 text-sm leading-relaxed ${
+                                isDarkMode ? "text-gray-300" : "text-gray-600"
+                              }`}
                             >
                               {project.description}
                             </p>
@@ -562,10 +567,11 @@ export default function Portfolio() {
                                 <Badge
                                   key={techIndex}
                                   variant="outline"
-                                  className={`rounded-lg px-2 py-0.5 text-xs ${isDarkMode
-                                    ? "border-gray-600 text-gray-300 hover:bg-gray-700"
-                                    : "border-gray-200 text-gray-600 hover:bg-gray-50"
-                                    }`}
+                                  className={`rounded-lg px-2 py-0.5 text-xs ${
+                                    isDarkMode
+                                      ? "border-gray-600 text-gray-300 hover:bg-zinc-800 hover:text-white"
+                                      : "border-gray-200 text-gray-600 hover:bg-zinc-800 hover:text-white"
+                                  }`}
                                 >
                                   {tech}
                                 </Badge>
@@ -575,8 +581,9 @@ export default function Portfolio() {
 
                           <div className="flex items-center justify-between mt-4">
                             <span
-                              className={`text-xs font-medium px-3 py-1 rounded-lg ${isDarkMode ? "text-gray-200 bg-gray-800" : "text-gray-700 bg-gray-100"
-                                }`}
+                              className={`text-xs font-medium px-3 py-1 rounded-lg ${
+                                isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
+                              }`}
                             >
                               {project.impact}
                             </span>
@@ -584,8 +591,9 @@ export default function Portfolio() {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                className={`rounded-lg ${isDarkMode ? "text-gray-400 hover:text-gray-200" : "text-gray-500 hover:text-gray-700 ml-2"
-                                  }`}
+                                className={`rounded-lg ${
+                                  isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
+                                }`}
                                 onClick={() => window.open(project.link, "_blank", "noopener noreferrer")}
                               >
                                 <ExternalLink className="h-3 w-3" />
@@ -604,10 +612,11 @@ export default function Portfolio() {
                   href="https://github.com/syed-asif-mn?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${isDarkMode
-                    ? "text-gray-300 hover:text-white hover:bg-gray-800"
-                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                    }`}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${
+                    isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                  }`}
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -621,18 +630,19 @@ export default function Portfolio() {
 
       case "experience":
         return (
-          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
+          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16">
             <div className="max-w-5xl mx-auto w-full">
-                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Professional Journey
-                </h2>
+              <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                Professional Journey
+              </h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {experiences.map((exp, index) => (
                   <Card
                     key={index}
-                    className={`rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                    className={`rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${
+                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                    }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-0 text-center">
@@ -654,8 +664,9 @@ export default function Portfolio() {
                       {exp.role && (
                         <div className="relative flex items-center mt-2">
                           <p
-                            className={`absolute left-1/2 transform -translate-x-1/2 text-xs px-3 py-1 rounded-lg ${isDarkMode ? "text-gray-300 bg-gray-800" : "text-gray-500 bg-gray-50"
-                              }`}
+                            className={`absolute left-1/2 transform -translate-x-1/2 text-xs px-3 py-1 rounded-lg ${
+                              isDarkMode ? "text-gray-300 bg-zinc-800" : "text-gray-500 bg-gray-50"
+                            }`}
                           >
                             {exp.period}
                           </p>
@@ -664,10 +675,11 @@ export default function Portfolio() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              className={`rounded-lg ml-2 ${isDarkMode
-                                ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                                : "text-gray-500 hover:text-gray-700 hover:bg-gray-100"
-                                }`}
+                              className={`rounded-lg ml-2 ${
+                                isDarkMode
+                                  ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                                  : "text-gray-500 hover:text-white hover:bg-zinc-800"
+                              }`}
                               onClick={() => openModal(exp)}
                             >
                               <Info className="h-4 w-4" />
@@ -683,27 +695,32 @@ export default function Portfolio() {
               {isModalOpen && selectedExp && (
                 <div
                   className={`fixed inset-0 z-50 flex items-center justify-center
-      ${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
+${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
                 >
                   <div
                     className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
-        ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
+${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
                   >
                     <div className="absolute top-3 right-3 z-10">
                       <button
                         onClick={() => setModalOpen(false)}
                         className={`p-1 rounded-full 
-            ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray-700"}`}
+    ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray-700"}`}
                       >
                         <X className="w-5 h-5" />
                       </button>
                     </div>
 
                     {/* 📋 Scrollable content */}
-                    <div className={`p-6 overflow-y-auto pr-4`} style={{ maxHeight: "calc(80vh - 48px)" }}>
-                      <h2 className={`text-lg font-semibold mb-4 mt-2 
-          ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                    <div
+                      className={`p-6 overflow-y-auto pr-4 ${isDarkMode ? "bg-zinc-800" : "bg-white"}`}
+                      style={{ maxHeight: "calc(80vh - 48px)" }}
+                    >
+                      <h2
+                        className={`text-lg font-semibold mb-4 mt-2 
+  ${isDarkMode ? "text-white" : "text-gray-900"}`}
+                      >
                         {selectedExp.company}
                       </h2>
                       <p className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
@@ -719,7 +736,9 @@ export default function Portfolio() {
                           )}
                           <ul className={`list-disc ml-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
                             {project.description.map((item, index) => (
-                              <li key={index} className="mb-1">{item}</li>
+                              <li key={index} className="mb-1">
+                                {item}
+                              </li>
                             ))}
                           </ul>
                         </div>
@@ -738,8 +757,9 @@ export default function Portfolio() {
                   {highlights.map((highlight, index) => (
                     <Card
                       key={index}
-                      className={`rounded-2xl p-4 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                        }`}
+                      className={`rounded-2xl p-4 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${
+                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-0">
@@ -770,7 +790,7 @@ export default function Portfolio() {
 
       case "education":
         return (
-          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
+          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
                 <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
@@ -780,8 +800,9 @@ export default function Portfolio() {
                   {education.map((edu, index) => (
                     <Card
                       key={index}
-                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                        }`}
+                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
+                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-8">
@@ -799,8 +820,9 @@ export default function Portfolio() {
                           </div>
                           <div className="mt-4 md:mt-0">
                             <span
-                              className={`px-4 py-2 rounded-xl font-medium ${isDarkMode ? "bg-gray-800 text-gray-200" : "bg-gray-100 text-gray-800"
-                                }`}
+                              className={`px-4 py-2 rounded-xl font-medium ${
+                                isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
+                              }`}
                             >
                               {edu.period}
                             </span>
@@ -814,20 +836,21 @@ export default function Portfolio() {
 
               {/* Certifications Section */}
               <div>
-              <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Certifications & Specializations
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   {certifications.map((cert, index) => (
                     <Card
                       key={index}
-                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                        }`}
+                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
+                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
-                          <div className={`p-3 rounded-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"}`}>
+                          <div className={`p-3 rounded-lg ${isDarkMode ? "bg-zinc-800" : "bg-gray-100"}`}>
                             <Award className={`h-6 w-6 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`} />
                           </div>
                           <div className="flex-1">
@@ -845,11 +868,13 @@ export default function Portfolio() {
                                 <Badge
                                   onClick={() => window.open(cert.url, "_blank")}
                                   variant="outline"
-                                  className={`text-xs cursor-pointer ${isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
-                                    }`}
+                                  className={`text-xs cursor-pointer ${
+                                    isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
+                                  }`}
                                 >
                                   {cert.credentialId}
-                                </Badge>)}
+                                </Badge>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -864,14 +889,15 @@ export default function Portfolio() {
 
       case "skills":
         return (
-          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-32">
+          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16">
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skills.map((skillGroup, index) => (
                   <Card
                     key={index}
-                    className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                    className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
+                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                    }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-6">
@@ -912,10 +938,11 @@ export default function Portfolio() {
       style={isDarkMode ? { backgroundColor: "#1F2022" } : {}}
     >
       {/* Desktop Navigation Pills - Hidden on mobile */}
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden md:block">
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden md:block border-transparent">
         <div
-          className={`backdrop-blur-sm border rounded-xl p-1 shadow-sm ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-            }`}
+          className={`backdrop-blur-sm border rounded-xl p-1 shadow-sm border-transparent ${
+            isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+          }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
           <div className="flex gap-1 items-center">
@@ -923,14 +950,13 @@ export default function Portfolio() {
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
-                  ? isDarkMode
-                    ? "bg-gray-600 text-white shadow-sm"
-                    : "bg-gray-800 text-white shadow-sm"
-                  : isDarkMode
-                    ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                  }`}
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${
+                  activeSection === item.id
+                    ? "bg-zinc-800 text-white shadow-sm"
+                    : isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-zinc-700"
+                      : "text-gray-600 hover:text-white hover:bg-zinc-700"
+                }`}
               >
                 {item.label}
               </button>
@@ -940,10 +966,11 @@ export default function Portfolio() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
-                  ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                  : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                  }`}
+                className={`w-7 h-7 rounded-lg transition-all duration-300 ${
+                  isDarkMode
+                    ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}
               >
                 {isDarkMode ? <Sun className="h-3 w-3" /> : <Moon className="h-3 w-3" />}
@@ -956,8 +983,9 @@ export default function Portfolio() {
       {/* Mobile Bottom Navigation Bar */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
         <div
-          className={`backdrop-blur-sm border-t shadow-lg ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-            }`}
+          className={`backdrop-blur-sm border-t shadow-lg ${
+            isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+          }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
           <div className="flex items-center justify-around px-2 py-2 gap-2">
@@ -965,14 +993,11 @@ export default function Portfolio() {
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
-                  ? isDarkMode
-                    ? "bg-gray-600 text-white shadow-sm"
-                    : "bg-gray-800 text-white shadow-sm"
-                  : isDarkMode
-                    ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                    : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
-                  }`}
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
+                  activeSection === item.id
+                    ? "bg-zinc-800 text-white shadow-sm"
+                    : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
+                }`}
               >
                 {item.icon}
               </button>
@@ -981,10 +1006,11 @@ export default function Portfolio() {
             <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
-                  ? "text-gray-400 hover:text-white hover:bg-gray-700"
-                  : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
-                  }`}
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
+                  isDarkMode
+                    ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-500 hover:text-white hover:bg-zinc-800"
+                }`}
               >
                 {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}
               </button>
@@ -994,7 +1020,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content with bottom padding for mobile navigation */}
-      <main className="transition-all duration-500 ease-in-out pb-16 md:pb-0 pt-0 sm:pt-8 md:pt-16">{renderSection()}</main>
-    </div >
+      <main className="transition-all duration-500 ease-in-out pb-4 pt-0 sm:pt-8 md:pt-16">{renderSection()}</main>
+    </div>
   )
 }

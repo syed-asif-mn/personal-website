@@ -45,6 +45,8 @@ export default function Portfolio() {
     skills: null,
   })
 
+  const mobileNavRef = useRef<HTMLElement | null>(null)
+
   const animatedTitles = [
     "Full Stack Developer",
     "Software Craftsman",
@@ -69,6 +71,16 @@ export default function Portfolio() {
 
     return () => clearInterval(interval)
   }, [animatedTitles.length])
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const h = mobileNavRef.current?.offsetHeight ?? 0
+      document.documentElement.style.setProperty("--mobile-nav-height", `${h}px`)
+    }
+    updateNavHeight()
+    window.addEventListener("resize", updateNavHeight)
+    return () => window.removeEventListener("resize", updateNavHeight)
+  }, [])
 
   const handleSectionChange = (section: Section) => {
     setActiveSection(section)
@@ -429,7 +441,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-0 md:pt-0 h-10/12"
+            className="flex items-center justify-center min-h-[calc(100dvh-var(--mobile-nav-height)-env(safe-area-inset-bottom,0px))] md:min-h-screen px-8 pt-0 md:pt-0"
           >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">
@@ -981,47 +993,40 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
       </nav>
 
       {/* Mobile Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div
-          className={`backdrop-blur-sm border-t shadow-lg ${
-            isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-          }`}
-          style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
-        >
-          <div className="flex items-center justify-around px-2 py-2 gap-2">
-            {navigationItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleSectionChange(item.id)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
-                  activeSection === item.id
-                    ? "bg-zinc-800 text-white shadow-sm"
-                    : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
-                }`}
-              >
-                {item.icon}
-              </button>
-            ))}
+      <nav ref={mobileNavRef} className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div className="flex items-center justify-around px-2 py-2 gap-2 pb-safe-area">
+          {navigationItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleSectionChange(item.id)}
+              className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
+                activeSection === item.id
+                  ? "bg-zinc-800 text-white shadow-sm"
+                  : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
+              }`}
+            >
+              {item.icon}
+            </button>
+          ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
-              <button
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
-                  isDarkMode
-                    ? "text-gray-400 hover:text-white hover:bg-zinc-800"
-                    : "text-gray-500 hover:text-white hover:bg-zinc-800"
-                }`}
-              >
-                {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}
-              </button>
-            </div>
+          <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
+                isDarkMode
+                  ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                  : "text-gray-500 hover:text-white hover:bg-zinc-800"
+              }`}
+            >
+              {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}
+            </button>
           </div>
         </div>
       </nav>
 
       {/* Main Content with bottom padding for mobile navigation */}
       <main
-        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-24 md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
+        className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 pb-safe-nav-tighter md:pb-0 ${activeSection === "home" ? "" : "md:pb-4"}`}
       >
         {renderSection()}
       </main>

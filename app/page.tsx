@@ -147,7 +147,7 @@ export default function Portfolio() {
   const experiences = [
     {
       company: "Nasdaq",
-      role: "Senior Software Developer",
+      role: "Senior Analyst - Software Engineering",
       period: "Dec 2024 - July 2025",
       logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
       projects: [
@@ -156,38 +156,38 @@ export default function Portfolio() {
           description: [
             "Worked on eVestment OMNI microservice, leveraging a .NET server integrated with a SQL Server database, a Vue.js front-end, deployed on AWS cloud infrastructure.",
             "Engineered and maintained other 5+ microservices, enabling seamless feature rollouts and improving service isolation.",
-            "Containerized microservices using Docker, accelerating development environments and reducing onboarding/setup time by ~80%.",
-            "Integrated services with Salesforce CRM, enabling real-time data syncing.",
+            "Containerized microservices using Docker, accelerating development environments and reducing onboarding/setup time by ~90%.",
+            "Integrated services with Salesforce CRM, enabling real-time data syncing."
           ],
         },
       ],
     },
     {
       company: "Siemens Healthineers",
-      role: "Software Developer",
+      role: "Engineer - Design & Development",
       period: "Sept 2020 - Nov 2024",
       logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
       projects: [
         {
           name: "OnScreen Menu Configurator",
           description: [
-            "Developed a .NET microservice using REST methodology with MySQL integration via Fluent NHibernate, handling ~10K+ daily transactions.",
-            "Optimized data querying with LINQ and applied SOLID principles across 20+ core classes to enhance scalability and maintainability.",
-            "Automated SSIT (Server & Client) using .NET, Selenium, and SpecFlow (BDD), reducing manual test effort by ~80%.",
-            "Designed Azure CI/CD pipelines for nightly build and test automation.",
-            "Performed unit testing with MsTest (server) and Jasmine (client).",
-            "Implemented modular Angular client architecture (v8 to v15).",
-            "Adhered to Scaled Agile methodologies throughout development.",
+            "Contributed to the development of a .NET microservice following REST methodology with MySQL integration using Fluent NHibernate, handling ~10K+ daily database transactions.",
+            "Utilized LINQ for efficient data querying, applying SOLID principles and design patterns across 20+ core classes, enhancing scalability and maintainability.",
+            "Automated server and client SSIT using .NET, Selenium, and SpecFlow (BDD), reducing manual test effort by ~80% and accelerating release cycles.",
+            "Designed Azure CI/CD build & test pipelines, ensuring nightly builds.",
+            "Performed Server Unit testing using MsTest, Client Unit testing using Jasmine.",
+            "Implemented modular client architecture using Angular.",
+            "Used Scaled AGILE methodologies during development."
           ],
         },
         {
           name: "Position List Editor",
           description: [
-            "Acted as Subsystem Product Owner—managed backlog of 50+ user stories and collaborated with UX/QT to refine scope.",
-            "Integrated NgRx for efficient client-side state management using Angular.",
-            "Automated client SSIT to achieve 95% coverage and enhance regression stability.",
-            "Proposed and delivered 3 innovative features now adopted in production.",
-            "Mentored peers through workshops and knowledge transfer sessions.",
+            "Subsystem Product Owner - Managed product backlog with 50+ user stories and refined scope with UX/QT collaboration.",
+            "Used the NgRx library with Angular for client state management.",
+            "Automated SSIT, increasing coverage to 95% thus improving regression stability.",
+            "Proposed 3 innovative ideas that are now integrated into the product.",
+            "Mentored team by conducting workshops and knowledge transfer sessions."
           ],
         },
         {
@@ -388,6 +388,13 @@ export default function Portfolio() {
       year: "2022",
     },
     {
+      title: "Top 10 - HackWave",
+      organization: "Nasdaq",
+      type: "Competition",
+      icon: "🌐",
+      year: "2025",
+    },
+    {
       title: "AVM Analyzer POC selected for evaluation at SHIFT Hackathon",
       organization: "Siemens Healthineers",
       type: "Competition",
@@ -406,7 +413,7 @@ export default function Portfolio() {
       organization: "Siemens Healthineers",
       type: "Volunteer",
       icon: "🪖",
-      year: "2022-23",
+      year: "2022-24",
     },
   ]
 

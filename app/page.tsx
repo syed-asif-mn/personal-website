@@ -146,18 +146,31 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      company: "Millenium Management",
+      role: "Software Development Consultant",
+      period: "September 2024 - Present",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Millennium_logo.svg",
+      projects: [
+        {
+          name: "Regulatory Reporting",
+          description: [
+            "Building regulatory reporting microservices using .NET, Angular, Kafka and PostgreSQL, with AWS cloud deployment and TeamCity CI/CD integration."
+          ],
+        },
+      ],
+    },
+    {
       company: "Nasdaq",
       role: "Senior Analyst - Software Engineering",
       period: "Dec 2024 - July 2025",
       logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
       projects: [
         {
-          name: "eVestment OMNI",
+          name: "Nasdaq eVestment OMNI",
           description: [
-            "Worked on eVestment OMNI microservice, leveraging a .NET server integrated with a SQL Server database, a Vue.js front-end, deployed on AWS cloud infrastructure.",
-            "Engineered and maintained other 5+ microservices, enabling seamless feature rollouts and improving service isolation.",
-            "Containerized microservices using Docker, accelerating development environments and reducing onboarding/setup time by ~90%.",
-            "Integrated services with Salesforce CRM, enabling real-time data syncing."
+            "Developed and maintained eVestment Omni and 5+ .NET microservices with SQL Server, Vue.js, and AWS.",
+            "Containerized services with Docker, reducing setup time by ~90%.",
+            "Integrated systems with Salesforce CRM for real-time data synchronization."
           ],
         },
       ],
@@ -171,23 +184,22 @@ export default function Portfolio() {
         {
           name: "OnScreen Menu Configurator",
           description: [
-            "Contributed to the development of a .NET microservice following REST methodology with MySQL integration using Fluent NHibernate, handling ~10K+ daily database transactions.",
-            "Utilized LINQ for efficient data querying, applying SOLID principles and design patterns across 20+ core classes, enhancing scalability and maintainability.",
-            "Automated server and client SSIT using .NET, Selenium, and SpecFlow (BDD), reducing manual test effort by ~80% and accelerating release cycles.",
-            "Designed Azure CI/CD build & test pipelines, ensuring nightly builds.",
-            "Performed Server Unit testing using MsTest, Client Unit testing using Jasmine.",
-            "Implemented modular client architecture using Angular.",
-            "Used Scaled AGILE methodologies during development."
+          "Developed a .NET REST microservice with MySQL and Fluent NHibernate, handling 10K+ daily transactions.",
+          "Applied LINQ, SOLID principles, and design patterns across 20+ core classes to improve scalability and maintainability.",
+          "Automated server/client SSIT using .NET, Selenium, and SpecFlow (BDD), cutting manual testing by ~80% and accelerating release cycles.",
+          "Built Azure CI/CD pipelines for automated builds and nightly test runs.",
+          "Wrote Server Unit tests with MsTest, Client Unit tests using Jasmine.",
+          "Used Scaled AGILE methodologies during development."
           ],
         },
         {
           name: "Position List Editor",
           description: [
-            "Subsystem Product Owner - Managed product backlog with 50+ user stories and refined scope with UX/QT collaboration.",
-            "Used the NgRx library with Angular for client state management.",
-            "Automated SSIT, increasing coverage to 95% thus improving regression stability.",
-            "Proposed 3 innovative ideas that are now integrated into the product.",
-            "Mentored team by conducting workshops and knowledge transfer sessions."
+            "Subsystem Product Owner - Managed product backlog and refined scope in collaboration with UX/QT teams.",
+            "Implemented state management using NgRx with Angular.",
+            "Automated SSIT, increasing coverage to 95% and improving regression stability.",
+            "Proposed 3 product innovations adopted into production.",
+            "Mentored team through workshops and knowledge-sharing sessions."
           ],
         },
         {
@@ -208,7 +220,7 @@ export default function Portfolio() {
         {
           name: "OnScreen Menu Configurator",
           description: [
-            "Automated ~35 On Screen display subsystem workflows using C#, Python and Selenium, reducing manual testing efforts from around 3 days to 3 hours.",
+            "Automated ~35 On Screen display subsystem workflows using C#, Python and Selenium, reducing manual testing efforts from around 2 days to 4 hours.",
           ],
         },
       ],
@@ -233,6 +245,25 @@ export default function Portfolio() {
   ]
 
   const certifications = [
+  {
+      name: "Generative AI Mastermind",
+      issuer: "Outskill",
+      date: "2025",
+      credentialId: "OUTSKILL",
+      url: "/assets/outsill_certificate.pdf",
+    },
+    {
+      name: "GenAI Engineering Mastermind",
+      issuer: "Outskill",
+      date: "2025",
+      credentialId: "OUTSKILL",
+      url: "/assets/outsill_engineering_certificate.pdf",
+    },
+    {
+      name: "Backend Development Path",
+      issuer: "Scrimba",
+      date: "2025",
+    },
     {
       name: "AWS DevOps Engineer Pro 2024: Mastering CI/CD Pipelines",
       issuer: "SkillSoft",
@@ -282,74 +313,79 @@ export default function Portfolio() {
   ]
 
   const skills = [
-    {
-      category: "Backend Technology",
-      items: [
-        { name: "C#", level: "Professional" },
-        { name: ".NET Core", level: "Professional" },
-        { name: ".NET Framework", level: "Professional" },
-        { name: "Python", level: "Intermediate" },
-      ],
-    },
-    {
-      category: "Web Development",
-      items: [
-        { name: "Angular (v8-16)", level: "Professional" },
-        { name: "Typescript", level: "Professional" },
-        { name: "Vue.js", level: "Beginner" },
-      ],
-    },
-    {
-      category: "Databases",
-      items: [
-        { name: "SQL Server", level: "Professional" },
-        { name: "MySQL", level: "Intermediate" },
-        { name: "MongoDB", level: "Intermediate" },
-      ],
-    },
-    {
-      category: "Cloud & DevOps",
-      items: [
-        { name: "AWS", level: "Intermediate" },
-        { name: "Azure DevOps", level: "Intermediate" },
-        { name: "Docker", level: "Intermediate" },
-        { name: "Vercel", level: "Intermediate" },
-      ],
-    },
-    {
-      category: "Testing",
-      items: [
-        { name: "Selenium", level: "Professional" },
-        { name: "SpecFlow", level: "Professional" },
-        { name: "MsTest", level: "Professional" },
-        { name: "Jasmine", level: "Professional" },
-      ],
-    },
-    {
-      category: "Version Control",
-      items: [
-        { name: "Git", level: "Professional" },
-        { name: "TFS", level: "Professional" },
-      ],
-    },
-    {
-      category: "Methodology",
-      items: [
-        { name: "Agile", level: "Professional" },
-        { name: "SAFE", level: "Professional" },
-        { name: "TDD", level: "Professional" },
-        { name: "BDD", level: "Professional" },
-      ],
-    },
-    {
-      category: "Others",
-      items: [
-        { name: "LINQ", level: "Professional" },
-        { name: "REST APIs", level: "Professional" },
-        { name: "Entity Framework", level: "Intermediate" },
-      ],
-    },
-  ]
+  {
+    category: "Programming Languages",
+    items: [
+      { name: "C#", level: "Professional" },
+      { name: "TypeScript", level: "Professional" },
+      { name: "JavaScript", level: "Professional" },
+      { name: "Python", level: "Intermediate" },
+    ],
+  },
+  {
+    category: "Backend Technologies",
+    items: [
+      { name: ".NET Core", level: "Professional" },
+      { name: ".NET Framework", level: "Professional" },
+      { name: "Event-Driven Architecture", level: "Professional" },
+      { name: "Kafka", level: "Professional" },
+      { name: "LINQ", level: "Professional" },
+      { name: "RESTful APIs", level: "Professional" },
+      { name: "Entity Framework", level: "Intermediate" },
+    ],
+  },
+  {
+    category: "Web Development",
+    items: [
+      { name: "Angular (v8–16)", level: "Professional" },
+      { name: "Vue.js", level: "Beginner" },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "SQL Server", level: "Professional" },
+      { name: "MySQL", level: "Intermediate" },
+      { name: "MongoDB", level: "Intermediate" },
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: [
+      { name: "AWS", level: "Intermediate" },
+      { name: "Azure DevOps", level: "Intermediate" },
+      { name: "Docker", level: "Intermediate" },
+      { name: "Vercel", level: "Intermediate" },
+    ],
+  },
+  {
+    category: "Testing & Quality Assurance",
+    items: [
+      { name: "Selenium", level: "Professional" },
+      { name: "SpecFlow", level: "Professional" },
+      { name: "MSTest", level: "Professional" },
+      { name: "Jasmine", level: "Professional" },
+    ],
+  },
+  {
+    category: "Version Control",
+    items: [
+      { name: "Git", level: "Professional" },
+      { name: "TFS", level: "Professional" },
+    ],
+  },
+  {
+    category: "Methodologies",
+    items: [
+      { name: "Agile", level: "Professional" },
+      { name: "SAFe", level: "Professional" },
+      { name: "TDD (Test-Driven Development)", level: "Professional" },
+      { name: "BDD (Behavior-Driven Development)", level: "Professional" },
+      { name: "DDD (Domain-Driven Design)", level: "Professional" },
+    ],
+  },
+];
+
 
   const highlights = [
     {

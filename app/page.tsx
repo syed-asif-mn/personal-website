@@ -147,7 +147,7 @@ export default function Portfolio() {
   const experiences = [
     {
       company: "Millenium Management",
-      role: "Software Development Consultant",
+      role: "Software Engineering Consultant",
       period: "September 2024 - Present",
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Millennium_logo.svg",
       projects: [

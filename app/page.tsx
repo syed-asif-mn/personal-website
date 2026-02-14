@@ -410,18 +410,11 @@ export default function Portfolio() {
       year: "2024",
     },
     {
-      title: "Hackathon Winner",
-      organization: "IIITH PGCSEDS",
+      title: "Top 10 - HackWave",
+      organization: "Nasdaq",
       type: "Competition",
-      icon: "🏅",
-      year: "2022",
-    },
-    {
-      title: "Finalist - HackerEarth Aerothon",
-      organization: "HackerEarth",
-      type: "Competition",
-      icon: "✈️",
-      year: "2022",
+      icon: "🌐",
+      year: "2025",
     },
     {
       title: "Top 10 - HackWave",
@@ -436,6 +429,20 @@ export default function Portfolio() {
       type: "Competition",
       icon: "🧠",
       year: "2024",
+    },
+    {
+      title: "Hackathon Winner",
+      organization: "IIITH PGCSEDS",
+      type: "Competition",
+      icon: "🏅",
+      year: "2022",
+    },
+    {
+      title: "Finalist - HackerEarth Aerothon",
+      organization: "HackerEarth",
+      type: "Competition",
+      icon: "✈️",
+      year: "2022",
     },
     {
       title: "Volunteer - Project Rise",
@@ -472,7 +479,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-0"
+            className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-4"
           >
             <div className="text-center max-w-4xl mx-responsive">
               <h1

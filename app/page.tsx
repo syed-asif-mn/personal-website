@@ -99,6 +99,15 @@ export default function Portfolio() {
       link: "https://github.com/syed-asif-mn/Voter-CRM",
     },
     {
+      title: "Millennium Treasury - Payment Reconciliation AI Agent",
+      description:
+        "An AI-driven Glean Agent that reconciles payment details from 100+ daily emails in the treasury inbox. It extracts data from email bodies and attachments, cross-verifies against treasury portal records and produces an Excel report highlighting discrepancies and verified payments, which is delivered to treasury managers via Slack.",
+      tech: ["Glean Agent Framework", "Microsoft Graph Outlook API"],
+      impact:
+        "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
+      image: "/assets/glean.svg",
+    },
+    {
       title: "Best",
       description:
         "A minimalistic web app featuring a handpicked collection of timeless song lyrics. Built for lovers of clean design and classic writing.",
@@ -184,12 +193,12 @@ export default function Portfolio() {
         {
           name: "OnScreen Menu Configurator",
           description: [
-          "Developed a .NET REST microservice with MySQL and Fluent NHibernate, handling 10K+ daily transactions.",
-          "Applied LINQ, SOLID principles, and design patterns across 20+ core classes to improve scalability and maintainability.",
-          "Automated server/client SSIT using .NET, Selenium, and SpecFlow (BDD), cutting manual testing by ~80% and accelerating release cycles.",
-          "Built Azure CI/CD pipelines for automated builds and nightly test runs.",
-          "Wrote Server Unit tests with MsTest, Client Unit tests using Jasmine.",
-          "Used Scaled AGILE methodologies during development."
+            "Developed a .NET REST microservice with MySQL and Fluent NHibernate, handling 10K+ daily transactions.",
+            "Applied LINQ, SOLID principles, and design patterns across 20+ core classes to improve scalability and maintainability.",
+            "Automated server/client SSIT using .NET, Selenium, and SpecFlow (BDD), cutting manual testing by ~80% and accelerating release cycles.",
+            "Built Azure CI/CD pipelines for automated builds and nightly test runs.",
+            "Wrote Server Unit tests with MsTest, Client Unit tests using Jasmine.",
+            "Used Scaled AGILE methodologies during development."
           ],
         },
         {
@@ -245,7 +254,7 @@ export default function Portfolio() {
   ]
 
   const certifications = [
-  {
+    {
       name: "Generative AI Mastermind",
       issuer: "Outskill",
       date: "2025",
@@ -313,78 +322,78 @@ export default function Portfolio() {
   ]
 
   const skills = [
-  {
-    category: "Programming Languages",
-    items: [
-      { name: "C#", level: "Professional" },
-      { name: "TypeScript", level: "Professional" },
-      { name: "JavaScript", level: "Professional" },
-      { name: "Python", level: "Intermediate" },
-    ],
-  },
-  {
-    category: "Backend Technologies",
-    items: [
-      { name: ".NET Core", level: "Professional" },
-      { name: ".NET Framework", level: "Professional" },
-      { name: "Event-Driven Architecture", level: "Professional" },
-      { name: "Kafka", level: "Professional" },
-      { name: "LINQ", level: "Professional" },
-      { name: "RESTful APIs", level: "Professional" },
-      { name: "Entity Framework", level: "Intermediate" },
-    ],
-  },
-  {
-    category: "Web Development",
-    items: [
-      { name: "Angular (v8–16)", level: "Professional" },
-      { name: "Vue.js", level: "Beginner" },
-    ],
-  },
-  {
-    category: "Databases",
-    items: [
-      { name: "SQL Server", level: "Professional" },
-      { name: "MySQL", level: "Intermediate" },
-      { name: "MongoDB", level: "Intermediate" },
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
-    items: [
-      { name: "AWS", level: "Intermediate" },
-      { name: "Azure DevOps", level: "Intermediate" },
-      { name: "Docker", level: "Intermediate" },
-      { name: "Vercel", level: "Intermediate" },
-    ],
-  },
-  {
-    category: "Testing & Quality Assurance",
-    items: [
-      { name: "Selenium", level: "Professional" },
-      { name: "SpecFlow", level: "Professional" },
-      { name: "MSTest", level: "Professional" },
-      { name: "Jasmine", level: "Professional" },
-    ],
-  },
-  {
-    category: "Version Control",
-    items: [
-      { name: "Git", level: "Professional" },
-      { name: "TFS", level: "Professional" },
-    ],
-  },
-  {
-    category: "Methodologies",
-    items: [
-      { name: "Agile", level: "Professional" },
-      { name: "SAFe", level: "Professional" },
-      { name: "TDD (Test-Driven Development)", level: "Professional" },
-      { name: "BDD (Behavior-Driven Development)", level: "Professional" },
-      { name: "DDD (Domain-Driven Design)", level: "Professional" },
-    ],
-  },
-];
+    {
+      category: "Programming Languages",
+      items: [
+        { name: "C#", level: "Professional" },
+        { name: "TypeScript", level: "Professional" },
+        { name: "JavaScript", level: "Professional" },
+        { name: "Python", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Backend Technologies",
+      items: [
+        { name: ".NET Core", level: "Professional" },
+        { name: ".NET Framework", level: "Professional" },
+        { name: "Event-Driven Architecture", level: "Professional" },
+        { name: "Kafka", level: "Professional" },
+        { name: "LINQ", level: "Professional" },
+        { name: "RESTful APIs", level: "Professional" },
+        { name: "Entity Framework", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Web Development",
+      items: [
+        { name: "Angular (v8–16)", level: "Professional" },
+        { name: "Vue.js", level: "Beginner" },
+      ],
+    },
+    {
+      category: "Databases",
+      items: [
+        { name: "SQL Server", level: "Professional" },
+        { name: "MySQL", level: "Intermediate" },
+        { name: "MongoDB", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Cloud & DevOps",
+      items: [
+        { name: "AWS", level: "Intermediate" },
+        { name: "Azure DevOps", level: "Intermediate" },
+        { name: "Docker", level: "Intermediate" },
+        { name: "Vercel", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Testing & Quality Assurance",
+      items: [
+        { name: "Selenium", level: "Professional" },
+        { name: "SpecFlow", level: "Professional" },
+        { name: "MSTest", level: "Professional" },
+        { name: "Jasmine", level: "Professional" },
+      ],
+    },
+    {
+      category: "Version Control",
+      items: [
+        { name: "Git", level: "Professional" },
+        { name: "TFS", level: "Professional" },
+      ],
+    },
+    {
+      category: "Methodologies",
+      items: [
+        { name: "Agile", level: "Professional" },
+        { name: "SAFe", level: "Professional" },
+        { name: "TDD (Test-Driven Development)", level: "Professional" },
+        { name: "BDD (Behavior-Driven Development)", level: "Professional" },
+        { name: "DDD (Domain-Driven Design)", level: "Professional" },
+      ],
+    },
+  ];
 
 
   const highlights = [
@@ -483,45 +492,40 @@ export default function Portfolio() {
           >
             <div className="text-center max-w-4xl mx-responsive">
               <h1
-                className={`text-hero font-light mb-responsive ${
-                  isDarkMode ? "text-white" : "text-gray-900"
-                }`}
+                className={`text-hero font-light mb-responsive ${isDarkMode ? "text-white" : "text-gray-900"
+                  }`}
               >
                 Asif Syed
               </h1>
-        
+
               <div className="relative h-12 mb-responsive flex items-center justify-center">
                 <p
-                  className={`font-light animate-fade-in-out text-title ${
-                    isDarkMode ? "text-gray-300" : "text-gray-600"
-                  }`}
+                  className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                    }`}
                 >
                   {animatedTitles[currentTitleIndex]}
                 </p>
               </div>
-        
+
               <h3
-                className={`text-subtitle font-light mb-responsive ${
-                  isDarkMode ? "text-gray-300" : "text-gray-600"
-                }`}
+                className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
               >
                 Building accessible, human-centered products at the intersection of
                 technology, data, and design.
               </h3>
-        
+
               <p
-                className={`mb-responsive font-light text-body ${
-                  isDarkMode ? "text-gray-300" : "text-gray-600"
-                }`}
+                className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
               >
                 With 5+ years of hands-on experience in cloud-native and enterprise-grade
                 solutions, powered by .NET, Angular, Azure, SQL Server and AWS.
               </p>
-        
+
               <div
-                className={`flex flex-wrap items-center justify-center gap-responsive mb-8 ${
-                  isDarkMode ? "text-gray-300" : "text-gray-600"
-                }`}
+                className={`flex flex-wrap items-center justify-center gap-responsive mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
               >
                 <Link
                   href="https://linkedin.com/in/syed-asif-mn"
@@ -532,44 +536,41 @@ export default function Portfolio() {
                   <Linkedin className="h-4 w-4" />
                   <span className="text-base">syed-asif-mn</span>
                 </Link>
-        
+
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
                   <span className="text-base">syedasifm.n@gmail.com</span>
                 </div>
-        
+
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
                   <span className="text-base">Bangalore, India</span>
                 </div>
               </div>
-        
+
               <div
-                className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-md ${
-                  isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-                } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
+                className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-md ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+                  } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
                 style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
               >
                 <button
                   onClick={() => handleSectionChange("projects")}
-                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
-                    activeSection === "projects"
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${activeSection === "projects"
                       ? "bg-zinc-800 text-white shadow-sm"
                       : isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
-                  }`}
+                        ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                        : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    }`}
                 >
                   View Projects
                 </button>
-        
+
                 <button
                   onClick={() => window.open("/assets/cv.pdf", "_blank")}
-                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
-                    isDarkMode
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-800"
                       : "text-gray-600 hover:text-white hover:bg-zinc-800"
-                  }`}
+                    }`}
                 >
                   View CV
                 </button>
@@ -591,9 +592,8 @@ export default function Portfolio() {
                 {projects.map((project, index) => (
                   <Card
                     key={index}
-                    className={`group hover:shadow-xl flex items-center transition-all duration-700 hover:-translate-y-2 rounded-2xl overflow-hidden card-hover ${
-                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                    }`}
+                    className={`group hover:shadow-xl flex items-center transition-all duration-700 hover:-translate-y-2 rounded-2xl overflow-hidden card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-0">
@@ -615,9 +615,8 @@ export default function Portfolio() {
                               {project.title}
                             </h3>
                             <p
-                              className={`mb-3 text-small leading-relaxed ${
-                                isDarkMode ? "text-gray-300" : "text-gray-600"
-                              }`}
+                              className={`mb-3 text-small leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                                }`}
                             >
                               {project.description}
                             </p>
@@ -626,11 +625,10 @@ export default function Portfolio() {
                                 <Badge
                                   key={techIndex}
                                   variant="outline"
-                                  className={`rounded-lg px-2 py-0.5 text-xs ${
-                                    isDarkMode
+                                  className={`rounded-lg px-2 py-0.5 text-xs ${isDarkMode
                                       ? "border-gray-600 text-gray-300 hover:bg-zinc-800 hover:text-white"
                                       : "border-gray-200 text-gray-600 hover:bg-zinc-800 hover:text-white"
-                                  }`}
+                                    }`}
                                 >
                                   {tech}
                                 </Badge>
@@ -640,9 +638,8 @@ export default function Portfolio() {
 
                           <div className="flex items-center justify-between  mt-responsive ">
                             <span
-                              className={`text-xs font-medium px-3 py-1 rounded-lg ${
-                                isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
-                              }`}
+                              className={`text-xs font-medium px-3 py-1 rounded-lg ${isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
+                                }`}
                             >
                               {project.impact}
                             </span>
@@ -650,9 +647,8 @@ export default function Portfolio() {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                className={`rounded-lg ${
-                                  isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
-                                }`}
+                                className={`rounded-lg ${isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
+                                  }`}
                                 onClick={() => window.open(project.link, "_blank", "noopener noreferrer")}
                               >
                                 <ExternalLink className="h-3 w-3" />
@@ -671,11 +667,10 @@ export default function Portfolio() {
                   href="https://github.com/syed-asif-mn?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${
-                    isDarkMode
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-800"
                       : "text-gray-600 hover:text-white hover:bg-zinc-800"
-                  }`}
+                    }`}
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -699,9 +694,8 @@ export default function Portfolio() {
                 {experiences.map((exp, index) => (
                   <Card
                     key={index}
-                    className={`rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${
-                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                    }`}
+                    className={`rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-0 text-center">
@@ -723,9 +717,8 @@ export default function Portfolio() {
                       {exp.role && (
                         <div className="relative flex items-center mt-2">
                           <p
-                            className={`absolute left-1/2 transform -translate-x-1/2 text-xs px-3 py-1 rounded-lg ${
-                              isDarkMode ? "text-gray-300 bg-zinc-800" : "text-gray-500 bg-gray-50"
-                            }`}
+                            className={`absolute left-1/2 transform -translate-x-1/2 text-xs px-3 py-1 rounded-lg ${isDarkMode ? "text-gray-300 bg-zinc-800" : "text-gray-500 bg-gray-50"
+                              }`}
                           >
                             {exp.period}
                           </p>
@@ -734,11 +727,10 @@ export default function Portfolio() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              className={`rounded-lg ml-2 ${
-                                isDarkMode
+                              className={`rounded-lg ml-2 ${isDarkMode
                                   ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                                   : "text-gray-500 hover:text-white hover:bg-zinc-800"
-                              }`}
+                                }`}
                               onClick={() => openModal(exp)}
                             >
                               <Info className="h-4 w-4" />
@@ -816,9 +808,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                   {highlights.map((highlight, index) => (
                     <Card
                       key={index}
-                      className={`rounded-2xl p-4 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${
-                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                      className={`rounded-2xl p-4 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                        }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-0">
@@ -859,9 +850,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                   {education.map((edu, index) => (
                     <Card
                       key={index}
-                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
-                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                        }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-8">
@@ -879,9 +869,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                           </div>
                           <div className=" mt-responsive  md:mt-0">
                             <span
-                              className={`px-4 py-2 rounded-xl font-medium ${
-                                isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
-                              }`}
+                              className={`px-4 py-2 rounded-xl font-medium ${isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
+                                }`}
                             >
                               {edu.period}
                             </span>
@@ -902,9 +891,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                   {certifications.map((cert, index) => (
                     <Card
                       key={index}
-                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
-                        isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                      }`}
+                      className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                        }`}
                       style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                     >
                       <CardContent className="p-6">
@@ -927,9 +915,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                                 <Badge
                                   onClick={() => window.open(cert.url, "_blank")}
                                   variant="outline"
-                                  className={`text-xs cursor-pointer ${
-                                    isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
-                                  }`}
+                                  className={`text-xs cursor-pointer ${isDarkMode ? "border-gray-600 text-gray-300" : "border-gray-200 text-gray-600"
+                                    }`}
                                 >
                                   {cert.credentialId}
                                 </Badge>
@@ -957,9 +944,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 {skills.map((skillGroup, index) => (
                   <Card
                     key={index}
-                    className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${
-                      isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
-                    }`}
+                    className={`hover:shadow-lg transition-all duration-500 rounded-2xl hover:-translate-y-1 card-hover ${isDarkMode ? "border-0" : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-6">
@@ -988,7 +974,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
             </div>
           </div>
         )
-      
+
       default:
         return null
     }
@@ -1002,9 +988,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
       {/* Desktop Navigation Pills - Hidden on mobile */}
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden md:block border-transparent">
         <div
-          className={`backdrop-blur-sm border rounded-xl p-1 shadow-sm border-transparent ${
-            isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-          }`}
+          className={`backdrop-blur-sm border rounded-xl p-1 shadow-sm border-transparent ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+            }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
           <div className="flex gap-1 items-center">
@@ -1012,13 +997,12 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${
-                  activeSection === item.id
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-700"
                       : "text-gray-600 hover:bg-zinc-200"
-                }`}
+                  }`}
               >
                 <span>{item.label}</span>
               </button>
@@ -1028,11 +1012,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <Button
                 variant="ghost"
                 size="icon"
-                className={`w-7 h-7 rounded-lg transition-all duration-300 ${
-                  isDarkMode
+                className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
                     ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                     : "text-gray-500 hover:text-white hover:bg-zinc-800"
-                }`}
+                  }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}
               >
                 {isDarkMode ? <Sun className="h-3 w-3" /> : <Moon className="h-3 w-3" />}
@@ -1045,9 +1028,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
       {/* Mobile Bottom Navigation Bar */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
         <div
-          className={`backdrop-blur-sm border-t shadow-lg ${
-            isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-          }`}
+          className={`backdrop-blur-sm border-t shadow-lg ${isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+            }`}
           style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
         >
           <div className="flex items-center justify-around px-2 py-2 gap-2">
@@ -1055,11 +1037,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
-                  activeSection === item.id
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
                     ? "bg-zinc-800 text-white shadow-sm"
                     : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
-                }`}
+                  }`}
               >
                 {item.icon}
               </button>
@@ -1068,11 +1049,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
             <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${
-                  isDarkMode
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
                     ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                     : "text-gray-500 hover:text-white hover:bg-zinc-800"
-                }`}
+                  }`}
               >
                 {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}
               </button>

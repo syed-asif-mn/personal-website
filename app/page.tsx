@@ -479,7 +479,7 @@ export default function Portfolio() {
       title: "Volunteer - Veteran Hiring Program",
       organization: "Siemens Healthineers",
       type: "Volunteer",
-      icon: "🪖",
+      icon: "🪖hat",
       year: "2022-24",
     },
   ]

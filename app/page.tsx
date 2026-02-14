@@ -954,7 +954,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
         return (
           <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                Skills & Expertise
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-responsive">
                 {skills.map((skillGroup, index) => (
                   <Card
                     key={index}
@@ -970,7 +973,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                       <div className="space-y-3">
                         {skillGroup.items.map((skill, skillIndex) => (
                           <div key={skillIndex} className="flex justify-between items-center">
-                            <span className={`text-sm font-medium ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
+                            <span className={`text-small font-medium ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
                               {skill.name}
                             </span>
                             <Badge

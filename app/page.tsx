@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, SetStateAction } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -32,7 +32,7 @@ export default function Portfolio() {
   const [isModalOpen, setModalOpen] = useState(false)
   const [selectedExp, setSelectedExp] = useState(null)
 
-  const openModal = (exp) => {
+  const openModal = (exp: SetStateAction<null>) => {
     setSelectedExp(exp)
     setModalOpen(true)
   }
@@ -59,8 +59,6 @@ export default function Portfolio() {
     "Test-Driven Developer",
     "Mentor & Collaborator",
   ]
-
-  const sectionOrder: Section[] = ["home", "projects", "experience", "education", "skills"]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -92,7 +90,7 @@ export default function Portfolio() {
     {
       title: "Voter CRM",
       description:
-        "An advanced, data-driven dashboard visualizing Telangana’s 2023 voter base. It provides granular demographic insights—by gender, age, and district—empowering political campaigns and researchers. Developed and funded by IIIT-Hyderabad for election analytics.",
+        "An advanced, data-driven dashboard visualizing Telangana's 2023 voter base. It provides granular demographic insights - by gender, age and district. Thus empowering political campaigns and researchers. Developed and funded by IIIT-Hyderabad for election analytics.",
       tech: ["Python", "Flask", "Streamlit", "Docker"],
       impact: "Delivered actionable insights from 20M+ voter records, enabling data-informed political strategies.",
       image: "/assets/vote.svg",
@@ -101,7 +99,7 @@ export default function Portfolio() {
     {
       title: "Millennium Treasury - Payment Reconciliation AI Agent",
       description:
-        "An AI-driven Glean Agent that reconciles payment details from 100+ daily emails in the treasury inbox. It extracts data from email bodies and attachments, cross-verifies against treasury portal records and produces an Excel report highlighting discrepancies and verified payments, which is delivered to treasury managers via Slack.",
+        "An AI-powered Glean Agent that processes 100+ daily treasury emails, extracts payment data from email bodies and attachments, cross-checks it with treasury portal records, and shares a Slack report highlighting verified payments and discrepancies.",
       tech: ["Glean Agent Framework", "Microsoft Graph Outlook API"],
       impact:
         "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
@@ -332,29 +330,43 @@ export default function Portfolio() {
       ],
     },
     {
+      category: "AI & Automation",
+      items: [
+        { name: "Glean Agent builder", level: "Professional" },
+        { name: "Claude Code", level: "Professional" },
+        { name: "Copilot Studio", level: "Professional" },
+      ],
+    },
+    {
+      category: "Architecture",
+      items: [
+        { name: "Event-Driven Architecture", level: "Professional" },
+        { name: "Microservices", level: "Professional" },
+        { name: "REST API Design", level: "Professional" },
+      ],
+    },
+    {
       category: "Backend Technologies",
       items: [
         { name: ".NET Core", level: "Professional" },
         { name: ".NET Framework", level: "Professional" },
-        { name: "Event-Driven Architecture", level: "Professional" },
         { name: "Kafka", level: "Professional" },
         { name: "LINQ", level: "Professional" },
-        { name: "RESTful APIs", level: "Professional" },
         { name: "Entity Framework", level: "Intermediate" },
       ],
     },
     {
       category: "Web Development",
       items: [
-        { name: "Angular (v8–16)", level: "Professional" },
-        { name: "Vue.js", level: "Beginner" },
+        { name: "Angular (v8 - v20)", level: "Professional" },
+        { name: "Vue.js", level: "Intermediate" },
       ],
     },
     {
       category: "Databases",
       items: [
+        { name: "PostgreSQL", level: "Professional" },
         { name: "SQL Server", level: "Professional" },
-        { name: "MySQL", level: "Intermediate" },
         { name: "MongoDB", level: "Intermediate" },
       ],
     },
@@ -364,14 +376,21 @@ export default function Portfolio() {
         { name: "AWS", level: "Intermediate" },
         { name: "Azure DevOps", level: "Intermediate" },
         { name: "Docker", level: "Intermediate" },
-        { name: "Vercel", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Observability",
+      items: [
+        { name: "Datadog", level: "Intermediate" },
+        { name: "Kibana", level: "Intermediate" },
       ],
     },
     {
       category: "Testing & Quality Assurance",
       items: [
+        { name: "Test-Driven Development", level: "Professional" },
+        { name: "BDD (SpecFlow)", level: "Professional" },
         { name: "Selenium", level: "Professional" },
-        { name: "SpecFlow", level: "Professional" },
         { name: "MSTest", level: "Professional" },
         { name: "Jasmine", level: "Professional" },
       ],
@@ -379,22 +398,18 @@ export default function Portfolio() {
     {
       category: "Version Control",
       items: [
-        { name: "Git", level: "Professional" },
+        { name: "Git (Github, Gitlab)", level: "Professional" },
         { name: "TFS", level: "Professional" },
       ],
     },
     {
       category: "Methodologies",
       items: [
-        { name: "Agile", level: "Professional" },
-        { name: "SAFe", level: "Professional" },
-        { name: "TDD (Test-Driven Development)", level: "Professional" },
-        { name: "BDD (Behavior-Driven Development)", level: "Professional" },
-        { name: "DDD (Domain-Driven Design)", level: "Professional" },
+        { name: "Scaled Agile Framework", level: "Professional" },
+        { name: "Domain-Driven Design", level: "Professional" },
       ],
     },
   ];
-
 
   const highlights = [
     {

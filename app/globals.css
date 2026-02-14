@@ -187,6 +187,12 @@
     margin-top: clamp(1rem, 2vw, 1.5rem);
   }
 
+  /* Typography tweaks for mobile readability */ 
+  body { 
+    line-height: 1.6; /* more breathing room */ 
+    font-size: clamp(1rem, 2.5vw, 1.125rem); /* scales slightly on mobile */
+  }
+  
   .animate-fade-in {
     animation: fadeIn 1s ease-out;
   }
@@ -230,7 +236,7 @@
   }
 
   .card-hover:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-4px) scale(1.02);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
@@ -285,7 +291,7 @@
 
   /* Enhanced card animations */
   .card-stagger {
-    animation: cardStagger 0.6s ease-out forwards;
+    animation: cardStagger 0.5s ease-out forwards;
   }
 
   @keyframes cardStagger {
@@ -346,9 +352,6 @@
 .dark ::-webkit-scrollbar-thumb:hover {
   background: #5a5d66;
 }
-
-/* Smooth transitions for all interactive elements */
-
 
 /* Enhanced hover effects */
 .group:hover .group-hover\:scale-105 {

@@ -419,11 +419,11 @@ export default function Portfolio() {
       year: "2024",
     },
     {
-      title: "Top 10 - HackWave",
-      organization: "Nasdaq",
+      title: "Contributer - AI Hack-celerator",
+      organization: "Millenium",
       type: "Competition",
-      icon: "🌐",
-      year: "2025",
+      icon: "🤖",
+      year: "2026",
     },
     {
       title: "Top 10 - HackWave",
@@ -556,10 +556,10 @@ export default function Portfolio() {
                 <button
                   onClick={() => handleSectionChange("projects")}
                   className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${activeSection === "projects"
-                      ? "bg-zinc-800 text-white shadow-sm"
-                      : isDarkMode
-                        ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                        : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    ? "bg-zinc-800 text-white shadow-sm"
+                    : isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
                     }`}
                 >
                   View Projects
@@ -568,8 +568,8 @@ export default function Portfolio() {
                 <button
                   onClick={() => window.open("/assets/cv.pdf", "_blank")}
                   className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-600 hover:text-white hover:bg-zinc-800"
                     }`}
                 >
                   View CV
@@ -626,8 +626,8 @@ export default function Portfolio() {
                                   key={techIndex}
                                   variant="outline"
                                   className={`rounded-lg px-2 py-0.5 text-xs ${isDarkMode
-                                      ? "border-gray-600 text-gray-300 hover:bg-zinc-800 hover:text-white"
-                                      : "border-gray-200 text-gray-600 hover:bg-zinc-800 hover:text-white"
+                                    ? "border-gray-600 text-gray-300 hover:bg-zinc-800 hover:text-white"
+                                    : "border-gray-200 text-gray-600 hover:bg-zinc-800 hover:text-white"
                                     }`}
                                 >
                                   {tech}
@@ -668,8 +668,8 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-600 hover:text-white hover:bg-zinc-800"
                     }`}
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -728,8 +728,8 @@ export default function Portfolio() {
                               variant="ghost"
                               size="sm"
                               className={`rounded-lg ml-2 ${isDarkMode
-                                  ? "text-gray-400 hover:text-white hover:bg-zinc-800"
-                                  : "text-gray-500 hover:text-white hover:bg-zinc-800"
+                                ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                                : "text-gray-500 hover:text-white hover:bg-zinc-800"
                                 }`}
                               onClick={() => openModal(exp)}
                             >
@@ -998,10 +998,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
                 className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
-                    ? "bg-zinc-800 text-white shadow-sm"
-                    : isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-zinc-700"
-                      : "text-gray-600 hover:bg-zinc-200"
+                  ? "bg-zinc-800 text-white shadow-sm"
+                  : isDarkMode
+                    ? "text-gray-300 hover:text-white hover:bg-zinc-700"
+                    : "text-gray-600 hover:bg-zinc-200"
                   }`}
               >
                 <span>{item.label}</span>
@@ -1013,8 +1013,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 variant="ghost"
                 size="icon"
                 className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
-                    ? "text-gray-400 hover:text-white hover:bg-zinc-800"
-                    : "text-gray-500 hover:text-white hover:bg-zinc-800"
+                  ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                  : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}
                 onClick={() => setIsDarkMode(!isDarkMode)}
               >
@@ -1038,8 +1038,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
                 className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
-                    ? "bg-zinc-800 text-white shadow-sm"
-                    : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
+                  ? "bg-zinc-800 text-white shadow-sm"
+                  : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
                   }`}
               >
                 {item.icon}
@@ -1050,8 +1050,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
                 className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
-                    ? "text-gray-400 hover:text-white hover:bg-zinc-800"
-                    : "text-gray-500 hover:text-white hover:bg-zinc-800"
+                  ? "text-gray-400 hover:text-white hover:bg-zinc-800"
+                  : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}
               >
                 {isDarkMode ? <Sun className="h-4 w-4 mb-1" /> : <Moon className="h-4 w-4 mb-1" />}

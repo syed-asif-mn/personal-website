@@ -476,111 +476,100 @@ export default function Portfolio() {
           >
             <div className="text-center max-w-4xl mx-responsive">
               <h1
-                className={`text-hero font-light mb-responsive ${isDarkMode ? "text-white" : "text-gray-900"}`}
+                className={`text-hero font-light mb-responsive ${
+                  isDarkMode ? "text-white" : "text-gray-900"
+                }`}
               >
-                Syed Asif
+                Asif Syed
               </h1>
+        
               <div className="relative h-12 mb-responsive flex items-center justify-center">
                 <p
-                  className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                  className={`font-light animate-fade-in-out text-title ${
+                    isDarkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
                   {animatedTitles[currentTitleIndex]}
                 </p>
               </div>
-
-              <h3 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                Building elegant solutions for complex problems
-              </h3>
-              <p
-                className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+        
+              <h3
+                className={`text-subtitle font-light mb-responsive ${
+                  isDarkMode ? "text-gray-300" : "text-gray-600"
+                }`}
               >
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="animate-fade-in h-min">
-                <h1
-                  className={`text-5xl font-light mb-responsive leading-tight md:text-5xl ${isDarkMode ? "text-white" : "text-gray-900"}`}
+                Building accessible, human-centered products at the intersection of
+                technology, data, and design.
+              </h3>
+        
+              <p
+                className={`mb-responsive font-light text-body ${
+                  isDarkMode ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                With 5+ years of hands-on experience in cloud-native and enterprise-grade
+                solutions, powered by .NET, Angular, Azure, SQL Server and AWS.
+              </p>
+        
+              <div
+                className={`flex flex-wrap items-center justify-center gap-responsive mb-8 ${
+                  isDarkMode ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                <Link
+                  href="https://linkedin.com/in/syed-asif-mn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
                 >
-                  Asif Syed
-                </h1>
-
-                <div className="h-16 mb-responsive flex items-center justify-center">
-                  <h2
-                    key={currentTitleIndex}
-                    className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
-                    style={{
-                      animation: "fadeInOut 3s ease-in-out infinite",
-                    }}
-                  >
-                    {animatedTitles[currentTitleIndex]}
-                  </h2>
+                  <Linkedin className="h-4 w-4" />
+                  <span className="text-base">syed-asif-mn</span>
+                </Link>
+        
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  <span className="text-base">syedasifm.n@gmail.com</span>
                 </div>
-
-                <h3 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Building accessible, human-centered products at the intersection of technology, data, and design.
-                </h3>
-
-                <p
-                  className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  With 5+ years of hands-on experience in cloud-native and enterprise-grade solutions, powered by .NET,
-                  Angular, Azure, SQL Server and AWS.
-                </p>
-
-                <div
-                  className={`flex flex-wrap items-center justify-center gap-responsive mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  <Link
-                    href="https://linkedin.com/in/syed-asif-mn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    <span className="text-base">syed-asif-mn</span>
-                  </Link>
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
-                    <span className="text-base">syedasifm.n@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4" />
-                    <span className="text-base">Bangalore, India</span>
-                  </div>
+        
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4" />
+                  <span className="text-base">Bangalore, India</span>
                 </div>
-
-                <div
-                  className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-md ${
-                    isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
-                  } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
-                  style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
+              </div>
+        
+              <div
+                className={`inline-flex backdrop-blur-sm border rounded-xl p-1 mb-8 shadow-md ${
+                  isDarkMode ? "border-gray-700" : "bg-white/95 border-gray-200"
+                } shadow-black/5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]`}
+                style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
+              >
+                <button
+                  onClick={() => handleSectionChange("projects")}
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
+                    activeSection === "projects"
+                      ? "bg-zinc-800 text-white shadow-sm"
+                      : isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                  }`}
                 >
-                  <button
-                    onClick={() => handleSectionChange("projects")}
-                    className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
-                      activeSection === "projects"
-                        ? "bg-zinc-800 text-white shadow-sm"
-                        : isDarkMode
-                          ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                          : "text-gray-600 hover:text-white hover:bg-zinc-800"
-                    }`}
-                  >
-                    View Projects
-                  </button>
-
-                  <button
-                    onClick={() => window.open("/assets/cv.pdf", "_blank")}
-                    className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
-                      isDarkMode
-                        ? "text-gray-300 hover:text-white hover:bg-zinc-800"
-                        : "text-gray-600 hover:text-white hover:bg-zinc-800"
-                    }`}
-                  >
-                    View CV
-                  </button>
-                </div>
+                  View Projects
+                </button>
+        
+                <button
+                  onClick={() => window.open("/assets/cv.pdf", "_blank")}
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
+                    isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                      : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                  }`}
+                >
+                  View CV
+                </button>
               </div>
             </div>
           </div>
-        )
+        );
 
       case "projects":
         return (

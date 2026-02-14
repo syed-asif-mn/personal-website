@@ -479,7 +479,7 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-4"
+            className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-6"
           >
             <div className="text-center max-w-4xl mx-responsive">
               <h1

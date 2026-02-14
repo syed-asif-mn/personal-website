@@ -472,20 +472,40 @@ export default function Portfolio() {
         return (
           <div
             ref={(el) => (sectionRefs.current.home = el)}
-            className="flex items-center justify-center min-h-screen px-8 pt-16 md:pt-0 md:-mt-8 pb-24 md:pb-0"
+            className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-24 md:pb-0"
           >
+            <div className="text-center max-w-4xl mx-responsive">
+              <h1
+                className={`text-hero font-light mb-responsive ${isDarkMode ? "text-white" : "text-gray-900"}`}
+              >
+                Syed Asif
+              </h1>
+              <div className="relative h-12 mb-responsive flex items-center justify-center">
+                <p
+                  className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                >
+                  {animatedTitles[currentTitleIndex]}
+                </p>
+              </div>
+
+              <h3 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                Building elegant solutions for complex problems
+              </h3>
+              <p
+                className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+              >
             <div className="text-center max-w-4xl mx-auto">
               <div className="animate-fade-in h-min">
                 <h1
-                  className={`text-5xl font-light mb-6 leading-tight md:text-5xl ${isDarkMode ? "text-white" : "text-gray-900"}`}
+                  className={`text-5xl font-light mb-responsive leading-tight md:text-5xl ${isDarkMode ? "text-white" : "text-gray-900"}`}
                 >
                   Asif Syed
                 </h1>
 
-                <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="h-16 mb-responsive flex items-center justify-center">
                   <h2
                     key={currentTitleIndex}
-                    className={`font-light animate-fade-in-out text-2xl ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                    className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite",
                     }}
@@ -494,19 +514,19 @@ export default function Portfolio() {
                   </h2>
                 </div>
 
-                <h3 className={`text-xl font-light mb-6 md:text-2xl ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                <h3 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                   Building accessible, human-centered products at the intersection of technology, data, and design.
                 </h3>
 
                 <p
-                  className={`mb-6 font-light leading-relaxed text-base ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                  className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                 >
                   With 5+ years of hands-on experience in cloud-native and enterprise-grade solutions, powered by .NET,
                   Angular, Azure, SQL Server and AWS.
                 </p>
 
                 <div
-                  className={`flex flex-wrap items-center justify-center gap-4 mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                  className={`flex flex-wrap items-center justify-center gap-responsive mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                 >
                   <Link
                     href="https://linkedin.com/in/syed-asif-mn"
@@ -535,7 +555,7 @@ export default function Portfolio() {
                 >
                   <button
                     onClick={() => handleSectionChange("projects")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${
+                    className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
                       activeSection === "projects"
                         ? "bg-zinc-800 text-white shadow-sm"
                         : isDarkMode
@@ -548,7 +568,7 @@ export default function Portfolio() {
 
                   <button
                     onClick={() => window.open("/assets/cv.pdf", "_blank")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${
+                    className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${
                       isDarkMode
                         ? "text-gray-300 hover:text-white hover:bg-zinc-800"
                         : "text-gray-600 hover:text-white hover:bg-zinc-800"
@@ -564,14 +584,14 @@ export default function Portfolio() {
 
       case "projects":
         return (
-          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-8">
+          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-responsive py-responsive">
             <h2
-              className={`block md:hidden text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
+              className={`block md:hidden text-title font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
             >
               Portfolio Showcase
             </h2>
             <div className="max-w-6xl mx-auto w-full">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-responsive">
                 {projects.map((project, index) => (
                   <Card
                     key={index}
@@ -599,7 +619,7 @@ export default function Portfolio() {
                               {project.title}
                             </h3>
                             <p
-                              className={`mb-3 text-sm leading-relaxed ${
+                              className={`mb-3 text-small leading-relaxed ${
                                 isDarkMode ? "text-gray-300" : "text-gray-600"
                               }`}
                             >
@@ -622,7 +642,7 @@ export default function Portfolio() {
                             </div>
                           </div>
 
-                          <div className="flex items-center justify-between mt-4">
+                          <div className="flex items-center justify-between  mt-responsive ">
                             <span
                               className={`text-xs font-medium px-3 py-1 rounded-lg ${
                                 isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
@@ -673,9 +693,9 @@ export default function Portfolio() {
 
       case "experience":
         return (
-          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-8">
+          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-5xl mx-auto w-full">
-              <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+              <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Professional Journey
               </h2>
 
@@ -698,10 +718,10 @@ export default function Portfolio() {
                           className="mx-auto"
                         />
                       </div>
-                      <h3 className={`font-medium text-base mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                      <h3 className={`font-medium text-body mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                         {exp.company}
                       </h3>
-                      <p className={`font-medium mb-2 text-sm ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
+                      <p className={`font-medium mb-2 text-small ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
                         {exp.role}
                       </p>
                       {exp.role && (
@@ -761,7 +781,7 @@ ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray
                       style={{ maxHeight: "calc(80vh - 48px)" }}
                     >
                       <h2
-                        className={`text-lg font-semibold mb-4 mt-2 
+                        className={`text-lg font-semibold mb-responsive mt-2 
 ${isDarkMode ? "text-white" : "text-gray-900"}`}
                       >
                         {selectedExp.company}
@@ -793,7 +813,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
               {/* Highlights Section */}
               <div>
-                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Highlights & Awards
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -809,7 +829,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">{highlight.icon}</span>
                           <div className="flex-1">
-                            <h4 className={`font-medium text-sm mb-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                            <h4 className={`font-medium text-small mb-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                               {highlight.title}
                             </h4>
                             <p className={`text-xs ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
@@ -833,10 +853,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "education":
         return (
-          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-8">
+          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
-                <h2 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Academic Background
                 </h2>
                 <div className="space-y-6">
@@ -854,14 +874,14 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                             <h4 className={`text-2xl font-medium mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                               {edu.title}
                             </h4>
-                            <p className={`mb-1 text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                            <p className={`mb-1 text-subtitle ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                               {edu.institution}
                             </p>
                             <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
                               {edu.description}
                             </p>
                           </div>
-                          <div className="mt-4 md:mt-0">
+                          <div className=" mt-responsive  md:mt-0">
                             <span
                               className={`px-4 py-2 rounded-xl font-medium ${
                                 isDarkMode ? "bg-zinc-800 text-gray-200" : "bg-gray-100 text-gray-800"
@@ -879,10 +899,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
               {/* Certifications Section */}
               <div>
-                <h3 className={`text-2xl font-medium mb-6 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Certifications & Specializations
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-responsive">
                   {certifications.map((cert, index) => (
                     <Card
                       key={index}
@@ -932,7 +952,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "skills":
         return (
-          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-8 pt-8 md:pt-16 pb-8">
+          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skills.map((skillGroup, index) => (
@@ -944,7 +964,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                     style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
                   >
                     <CardContent className="p-6">
-                      <h3 className={`text-lg font-medium mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                      <h3 className={`text-lg font-medium mb-responsive ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                         {skillGroup.category}
                       </h3>
                       <div className="space-y-3">

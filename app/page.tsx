@@ -265,7 +265,7 @@ export default function Portfolio() {
       issuer: "Outskill",
       date: "2025",
       credentialId: "OUTSKILL",
-      url: "/assets/outsill_engineering_certificate.pdf",
+      url: "/assets/outsill_eng_certificate.pdf",
     },
     {
       name: "Backend Development Path",

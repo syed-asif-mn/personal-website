@@ -1001,7 +1001,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
   return (
     <div role="main"
-      className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"}`}
+      className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"} ${activeSection === "home" ? "overflow-y-hidden h-screen" : "overflow-y-auto"}`}
       style={isDarkMode ? { backgroundColor: "#1F2022" } : {}}
     >
       {/* Desktop Navigation Pills - Hidden on mobile */}

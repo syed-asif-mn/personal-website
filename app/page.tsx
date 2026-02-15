@@ -88,15 +88,6 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Explainable AI with H2O",
-      description:
-        "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
-      tech: ["Python", "H2O", "Kaggle"],
-      impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
-      image: "/assets/bike.svg",
-      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
-    },
-    {
       title: "Millennium Treasury - Payment Reconciliation AI Agent",
       description:
         "An AI-powered Glean Agent that processes 100+ daily treasury emails, extracts payment data from email bodies and attachments, cross-checks it with treasury portal records, and shares a Slack report highlighting verified payments and discrepancies.",
@@ -104,6 +95,15 @@ export default function Portfolio() {
       impact:
         "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
       image: "/assets/glean.svg",
+    },
+    {
+      title: "Explainable AI with H2O",
+      description:
+        "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
+      tech: ["Python", "H2O", "Kaggle"],
+      impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
+      image: "/assets/bike.svg",
+      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
     },
     {
       title: "Voter CRM",

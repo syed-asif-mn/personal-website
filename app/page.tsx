@@ -516,6 +516,7 @@ export default function Portfolio() {
 
               <div className="relative h-12 mb-responsive flex items-center justify-center">
                 <p
+                  key={currentTitleIndex}
                   className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"
                     }`}
                 >

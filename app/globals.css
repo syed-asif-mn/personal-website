@@ -213,11 +213,11 @@
       opacity: 0;
       transform: translateY(10px);
     }
-    20% {
+    15% {
       opacity: 1;
       transform: translateY(0);
     }
-    80% {
+    85% {
       opacity: 1;
       transform: translateY(0);
     }
@@ -228,7 +228,7 @@
   }
 
   .animate-fade-in-out {
-    animation: fadeInOut 3s ease-in-out;
+    animation: fadeInOut 3s ease-in-out infinite;
   }
 
   .card-hover {

@@ -103,7 +103,7 @@ export default function Portfolio() {
       tech: ["Glean Agent Framework", "Microsoft Graph Outlook API"],
       impact:
         "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
-      image: "/assets/glean.png",
+      image: "/assets/glean.svg",
     },
     {
       title: "Best",

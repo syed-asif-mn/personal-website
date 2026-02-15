@@ -1001,7 +1001,6 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
   return (
     <div
-      role="main"
       className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"}`}
       style={isDarkMode ? { backgroundColor: "#1F2022" } : {}}
     >

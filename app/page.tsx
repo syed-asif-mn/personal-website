@@ -762,13 +762,14 @@ export default function Portfolio() {
 
               {isModalOpen && selectedExp && (
                 <div
-                  className={`fixed inset-0 z-50 flex items-center justify-center
-${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
+                  onClick={() => setModalOpen(false)}
                 >
                   <div
                     className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
 ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <div className="absolute top-3 right-3 z-10">
                       <button

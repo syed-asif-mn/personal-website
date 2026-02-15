@@ -664,7 +664,7 @@ export default function Portfolio() {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                className={`rounded-lg ${isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
+                                className={`rounded-lg cursor-pointer ${isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
                                   }`}
                                 onClick={() => window.open(project.link, "_blank", "noopener noreferrer")}
                               >
@@ -744,7 +744,7 @@ export default function Portfolio() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              className={`rounded-lg ml-2 ${isDarkMode
+                              className={`rounded-lg ml-2 cursor-pointer ${isDarkMode
                                 ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                                 : "text-gray-500 hover:text-white hover:bg-zinc-800"
                                 }`}
@@ -786,6 +786,7 @@ ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray
                       className={`p-6 overflow-y-auto pr-4 ${isDarkMode ? "bg-zinc-800" : "bg-white"}`}
                       style={{ maxHeight: "calc(80vh - 48px)" }}
                     >
+                      <h2 className="sr-only">Experience Details</h2>
                       <h2
                         className={`text-lg font-semibold mb-responsive mt-2 
 ${isDarkMode ? "text-white" : "text-gray-900"}`}
@@ -999,7 +1000,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
   }
 
   return (
-    <div
+    <main
       className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"}`}
       style={isDarkMode ? { backgroundColor: "#1F2022" } : {}}
     >
@@ -1084,7 +1085,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
         className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 ${activeSection === "home" ? "pb-0" : "pb-8"}`}
       >
         {renderSection()}
-      </main>
-    </div>
+      </section>
+    </main>
   )
 }

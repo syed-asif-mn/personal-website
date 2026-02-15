@@ -280,6 +280,32 @@ export default function Portfolio() {
       url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658",
     },
     {
+      name: "Secure Coding",
+      issuer: "CodeBashing",
+      date: "2025",
+      credentialId: "SC-CB",
+    },
+    {
+      name: "Scrum Product Owner",
+      issuer: "Skillsoft",
+      date: "2024",
+      credentialId: "10920581",
+      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/cacefea2-37c4-4574-8625-7356a4a4c7de",
+    },
+    {
+      name: "AI on Cloud",
+      issuer: "Great Learning",
+      date: "2023",
+      credentialId: "JTWYHSGM",
+      url: "https://www.mygreatlearning.com/certificate/JTWYHSGM",
+    },
+    {
+      name: "Front-End Web Development",
+      issuer: "Udemy",
+      date: "2021",
+      credentialId: "FE-UD",
+    },
+    {
       name: "Deep Learning Specialization",
       issuer: "Coursera",
       date: "2020",
@@ -291,32 +317,6 @@ export default function Portfolio() {
       issuer: "Udacity",
       date: "2020",
       credentialId: "DSA-UD",
-    },
-    {
-      name: "Secure Coding",
-      issuer: "CodeBashing",
-      date: "2025",
-      credentialId: "SC-CB",
-    },
-    {
-      name: "AI on Cloud",
-      issuer: "Great Learning",
-      date: "2023",
-      credentialId: "JTWYHSGM",
-      url: "https://www.mygreatlearning.com/certificate/JTWYHSGM",
-    },
-    {
-      name: "Scrum Product Owner",
-      issuer: "Skillsoft",
-      date: "2024",
-      credentialId: "10920581",
-      url: "https://skillsoft.digitalbadges-eu.skillsoft.com/cacefea2-37c4-4574-8625-7356a4a4c7de",
-    },
-    {
-      name: "Front-End Web Development",
-      issuer: "Udemy",
-      date: "2021",
-      credentialId: "FE-UD",
     },
   ]
 
@@ -470,18 +470,18 @@ export default function Portfolio() {
       year: "2022",
     },
     {
-      title: "Volunteer - Project Rise",
-      organization: "Save The Child NGO",
-      type: "Volunteer",
-      icon: "🧍",
-      year: "2021-23",
-    },
-    {
       title: "Volunteer - Veteran Hiring Program",
       organization: "Siemens Healthineers",
       type: "Volunteer",
       icon: "🪖",
       year: "2022-24",
+    },
+    {
+      title: "Volunteer - Project Rise",
+      organization: "Save The Child NGO",
+      type: "Volunteer",
+      icon: "🧍",
+      year: "2021-23",
     },
   ]
 

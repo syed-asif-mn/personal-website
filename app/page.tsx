@@ -88,13 +88,13 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Voter CRM",
+      title: "Explainable AI with H2O",
       description:
-        "An advanced, data-driven dashboard visualizing Telangana's 2023 voter base. It provides granular demographic insights - by gender, age and district. Thus empowering political campaigns and researchers. Developed and funded by IIIT-Hyderabad for election analytics.",
-      tech: ["Python", "Flask", "Streamlit", "Docker"],
-      impact: "Delivered actionable insights from 20M+ voter records, enabling data-informed political strategies.",
-      image: "/assets/vote.svg",
-      link: "https://github.com/syed-asif-mn/Voter-CRM",
+        "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
+      tech: ["Python", "H2O", "Kaggle"],
+      impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
+      image: "/assets/bike.svg",
+      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
     },
     {
       title: "Millennium Treasury - Payment Reconciliation AI Agent",
@@ -104,6 +104,24 @@ export default function Portfolio() {
       impact:
         "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
       image: "/assets/glean.svg",
+    },
+    {
+      title: "Voter CRM",
+      description:
+        "An advanced, data-driven dashboard visualizing Telangana's 2023 voter base. It provides granular demographic insights - by gender, age and district. Thus empowering political campaigns and researchers. Developed and funded by IIIT-Hyderabad for election analytics.",
+      tech: ["Python", "Flask", "Streamlit", "Docker"],
+      impact: "Delivered actionable insights from 20M+ voter records, enabling data-informed political strategies.",
+      image: "/assets/vote.svg",
+      link: "https://github.com/syed-asif-mn/Voter-CRM",
+    },
+    {
+      title: "OMNI Microservices Orchestrator",
+      description:
+        "A local orchestration platform with an intuitive dashboard for discovering, provisioning, and running Nasdaq OMNI microservices in Dockerized containers directly on developers' machines - ensuring consistent, production-parity environments.",
+      tech: ["Vue 3", "PowerShell", "Docker"],
+      impact:
+        "Reduced environment setup time from 30 minutes to couple of minutes while eliminating configuration inconsistencies across teams.",
+      image: "/assets/dashboard.svg",
     },
     {
       title: "Best",
@@ -131,23 +149,6 @@ export default function Portfolio() {
       tech: ["Power BI", "Azure Analytic Views", "Python", "Pandas", "Matplotlib"],
       impact: "Deployed across 15+ teams within Siemens Healthineers (Advanced Therapies Division).",
       image: "/assets/chart.svg",
-    },
-    {
-      title: "Explainable AI with H2O",
-      description:
-        "A practical exploration of explainability in bike rental prediction models using H2O's AutoML suite. Visualizes SHAP, feature importance, and model diagnostics.",
-      tech: ["Python", "H2O", "Kaggle"],
-      impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
-      image: "/assets/bike.svg",
-      link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
-    },
-    {
-      title: "Local Microservices Simulator",
-      description:
-        "An intuitive dashboard for retrieving and building Nasdaq OMNI microservices, enabling seamless containerization or local execution.",
-      tech: ["Vue 3", "Powershell", "Docker"],
-      impact: "Cut developer testing environment setup time from 30 minutes to under one minute.",
-      image: "/assets/dashboard.svg",
     },
   ]
 

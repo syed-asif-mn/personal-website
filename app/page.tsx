@@ -1085,7 +1085,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
         className={`transition-all duration-500 ease-in-out pt-0 sm:pt-8 md:pt-16 ${activeSection === "home" ? "pb-0" : "pb-8"}`}
       >
         {renderSection()}
-      </section>
+      </main>
     </div>
   )
 }

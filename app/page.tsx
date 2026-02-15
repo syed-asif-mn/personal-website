@@ -503,7 +503,7 @@ export default function Portfolio() {
       case "home":
         return (
           <div
-            ref={(el) => (sectionRefs.current.home = el)}
+            ref={(el: HTMLDivElement | null) => (sectionRefs.current.home = el)}
             className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-10"
           >
             <div className="text-center max-w-4xl mx-responsive">
@@ -608,7 +608,7 @@ export default function Portfolio() {
 
       case "projects":
         return (
-          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.projects = el)} className="min-h-screen px-responsive py-responsive">
             <h2
               className={`block md:hidden text-title font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
             >
@@ -711,7 +711,7 @@ export default function Portfolio() {
 
       case "experience":
         return (
-          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.experience = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-5xl mx-auto w-full">
               <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Professional Journey
@@ -779,7 +779,7 @@ export default function Portfolio() {
                     className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
 ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
                   >
                     <div className="absolute top-3 right-3 z-10">
                       <button
@@ -806,7 +806,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                         Role: <strong className={isDarkMode ? "text-white" : ""}>{selectedExp.role}</strong>
                       </p>
 
-                      {selectedExp.projects.map((project, idx) => (
+                      {selectedExp.projects.map((project: { name: any; description: any[] }, idx: any) => (
                         <div key={idx} className="mb-4">
                           {project.name && (
                             <p className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
@@ -814,7 +814,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                             </p>
                           )}
                           <ul className={`list-disc ml-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
-                            {project.description.map((item, index) => (
+                            {project.description.map((item: any, index: any) => (
                               <li key={index} className="mb-1">
                                 {item}
                               </li>
@@ -868,7 +868,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "education":
         return (
-          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.education = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
                 <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
@@ -963,7 +963,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "skills":
         return (
-          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Skills & Expertise

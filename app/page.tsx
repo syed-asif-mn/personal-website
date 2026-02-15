@@ -571,8 +571,8 @@ export default function Portfolio() {
                 style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
               >
                 <button
-                  onClick={() => handleSectionChange("projects")}
-                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${activeSection === "projects"
+                  onClick={() => setActiveSection("projects")}
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 cursor-pointer ${activeSection === "projects"
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-800"
@@ -580,6 +580,16 @@ export default function Portfolio() {
                     }`}
                 >
                   View Projects
+                </button>
+
+                <button
+                  onClick={() => window.open("/assets/cv.pdf", "_blank")}
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 cursor-pointer ${isDarkMode
+                    ? "text-gray-300 hover:text-white hover:bg-zinc-800"
+                    : "text-gray-600 hover:text-white hover:bg-zinc-800"
+                    }`}
+                >
+                  View CV
                 </button>
 
                 <button
@@ -1015,7 +1025,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg cursor-pointer ${activeSection === item.id
                   ? "bg-zinc-800 text-white shadow-sm"
                   : isDarkMode
                     ? "text-gray-300 hover:text-white hover:bg-zinc-700"
@@ -1026,11 +1036,11 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               </button>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
+            <div className="ml-2 pl-2 border-l border-gray-200 dark:border-gray-600">
               <Button
                 variant="ghost"
                 size="icon"
-                className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
+                className={`w-7 h-7 rounded-lg transition-all duration-300 cursor-pointer ${isDarkMode
                   ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                   : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}
@@ -1055,7 +1065,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 cursor-pointer ${activeSection === item.id
                   ? "bg-zinc-800 text-white shadow-sm"
                   : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
                   }`}
@@ -1064,10 +1074,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               </button>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
+            <div className="ml-2 pl-2 border-l border-gray-200 dark:border-gray-600 flex-shrink-0">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 cursor-pointer ${isDarkMode
                   ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                   : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}

@@ -503,7 +503,7 @@ export default function Portfolio() {
       case "home":
         return (
           <div
-            ref={(el) => (sectionRefs.current.home = el)}
+            ref={(el: HTMLDivElement | null) => (sectionRefs.current.home = el)}
             className="flex items-center justify-center min-h-screen px-responsive pt-responsive md:pt-0 pb-18 md:pb-10"
           >
             <div className="text-center max-w-4xl mx-responsive">
@@ -516,6 +516,7 @@ export default function Portfolio() {
 
               <div className="relative h-12 mb-responsive flex items-center justify-center">
                 <p
+                  key={currentTitleIndex}
                   className={`font-light animate-fade-in-out text-title ${isDarkMode ? "text-gray-300" : "text-gray-600"
                     }`}
                 >
@@ -570,8 +571,8 @@ export default function Portfolio() {
                 style={isDarkMode ? { backgroundColor: "#41434B" } : {}}
               >
                 <button
-                  onClick={() => handleSectionChange("projects")}
-                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 ${activeSection === "projects"
+                  onClick={() => setActiveSection("projects")}
+                  className={`px-3 py-1.5 rounded-lg text-small font-medium transition-all duration-300 cursor-pointer ${activeSection === "projects"
                     ? "bg-zinc-800 text-white shadow-sm"
                     : isDarkMode
                       ? "text-gray-300 hover:text-white hover:bg-zinc-800"
@@ -597,7 +598,7 @@ export default function Portfolio() {
 
       case "projects":
         return (
-          <div ref={(el) => (sectionRefs.current.projects = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.projects = el)} className="min-h-screen px-responsive py-responsive">
             <h2
               className={`block md:hidden text-title font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}
             >
@@ -663,7 +664,7 @@ export default function Portfolio() {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                className={`rounded-lg ${isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
+                                className={`rounded-lg cursor-pointer ${isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-white ml-2"
                                   }`}
                                 onClick={() => window.open(project.link, "_blank", "noopener noreferrer")}
                               >
@@ -700,7 +701,7 @@ export default function Portfolio() {
 
       case "experience":
         return (
-          <div ref={(el) => (sectionRefs.current.experience = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.experience = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-5xl mx-auto w-full">
               <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Professional Journey
@@ -743,7 +744,7 @@ export default function Portfolio() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              className={`rounded-lg ml-2 ${isDarkMode
+                              className={`rounded-lg ml-2 cursor-pointer ${isDarkMode
                                 ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                                 : "text-gray-500 hover:text-white hover:bg-zinc-800"
                                 }`}
@@ -761,13 +762,14 @@ export default function Portfolio() {
 
               {isModalOpen && selectedExp && (
                 <div
-                  className={`fixed inset-0 z-50 flex items-center justify-center
-${isDarkMode ? "bg-opacity-80" : "bg-black bg-opacity-50"}`}
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
+                  onClick={() => setModalOpen(false)}
                 >
                   <div
                     className={`relative rounded-2xl shadow-xl max-w-md w-full transition-colors duration-300
 ${isDarkMode ? "bg-zinc-800" : "bg-white"} overflow-hidden`}
                     style={{ maxHeight: "80vh", maxWidth: "80vw" }}
+                    onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
                   >
                     <div className="absolute top-3 right-3 z-10">
                       <button
@@ -784,6 +786,7 @@ ${isDarkMode ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-gray
                       className={`p-6 overflow-y-auto pr-4 ${isDarkMode ? "bg-zinc-800" : "bg-white"}`}
                       style={{ maxHeight: "calc(80vh - 48px)" }}
                     >
+                      <h2 className="sr-only">Experience Details</h2>
                       <h2
                         className={`text-lg font-semibold mb-responsive mt-2 
 ${isDarkMode ? "text-white" : "text-gray-900"}`}
@@ -794,7 +797,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                         Role: <strong className={isDarkMode ? "text-white" : ""}>{selectedExp.role}</strong>
                       </p>
 
-                      {selectedExp.projects.map((project, idx) => (
+                      {selectedExp.projects.map((project: { name: any; description: any[] }, idx: any) => (
                         <div key={idx} className="mb-4">
                           {project.name && (
                             <p className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
@@ -802,7 +805,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
                             </p>
                           )}
                           <ul className={`list-disc ml-4 ${isDarkMode ? "text-gray-300" : "text-gray-800"}`}>
-                            {project.description.map((item, index) => (
+                            {project.description.map((item: any, index: any) => (
                               <li key={index} className="mb-1">
                                 {item}
                               </li>
@@ -856,7 +859,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "education":
         return (
-          <div ref={(el) => (sectionRefs.current.education = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.education = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <div className="mb-12">
                 <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
@@ -951,7 +954,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
 
       case "skills":
         return (
-          <div ref={(el) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
+          <div ref={(el: HTMLDivElement | null) => (sectionRefs.current.skills = el)} className="min-h-screen px-responsive py-responsive">
             <div className="max-w-6xl mx-auto w-full">
               <h2 className={`text-2xl font-medium mb-responsive text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Skills & Expertise
@@ -997,8 +1000,8 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
   }
 
   return (
-    <div
-      className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"}`}
+    <div role="main"
+      className={`transition-colors duration-300 ${isDarkMode ? "" : "bg-white"} ${activeSection === "home" ? "overflow-y-hidden h-screen" : "overflow-y-auto"}`}
       style={isDarkMode ? { backgroundColor: "#1F2022" } : {}}
     >
       {/* Desktop Navigation Pills - Hidden on mobile */}
@@ -1013,7 +1016,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg ${activeSection === item.id
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-lg cursor-pointer ${activeSection === item.id
                   ? "bg-zinc-800 text-white shadow-sm"
                   : isDarkMode
                     ? "text-gray-300 hover:text-white hover:bg-zinc-700"
@@ -1024,11 +1027,11 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               </button>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
+            <div className="ml-2 pl-2 border-l border-gray-200 dark:border-gray-600">
               <Button
                 variant="ghost"
                 size="icon"
-                className={`w-7 h-7 rounded-lg transition-all duration-300 ${isDarkMode
+                className={`w-7 h-7 rounded-lg transition-all duration-300 cursor-pointer ${isDarkMode
                   ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                   : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}
@@ -1053,7 +1056,7 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               <button
                 key={item.id}
                 onClick={() => handleSectionChange(item.id)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${activeSection === item.id
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 cursor-pointer ${activeSection === item.id
                   ? "bg-zinc-800 text-white shadow-sm"
                   : "hover:bg-zinc-700 hover:text-white " + (isDarkMode ? "text-gray-400" : "text-gray-500")
                   }`}
@@ -1062,10 +1065,10 @@ ${isDarkMode ? "text-white" : "text-gray-900"}`}
               </button>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-gray-300 dark:border-gray-600 flex-shrink-0">
+            <div className="ml-2 pl-2 border-l border-gray-200 dark:border-gray-600 flex-shrink-0">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 ${isDarkMode
+                className={`flex flex-col items-center justify-center p-2 flex-1 rounded-lg transition-all duration-300 cursor-pointer ${isDarkMode
                   ? "text-gray-400 hover:text-white hover:bg-zinc-800"
                   : "text-gray-500 hover:text-white hover:bg-zinc-800"
                   }`}

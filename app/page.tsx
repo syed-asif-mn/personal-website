@@ -111,7 +111,7 @@ export default function Portfolio() {
         "A minimalistic web app featuring a handpicked collection of timeless song lyrics. Built for lovers of clean design and classic writing.",
       tech: ["React", "Tailwind CSS", "Glitch"],
       impact: "Offers a curated, personal archive of evergreen lyrics with a sleek UI.",
-      image: "/assets/playlist.svg",
+      image: "/assets/best.svg",
       link: "https://best-lyrics.stackblitz.io/",
     },
     {

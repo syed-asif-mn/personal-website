@@ -318,6 +318,20 @@ export default function Portfolio() {
       date: "2020",
       credentialId: "DSA-UD",
     },
+    {
+      name: "IOT Programming",
+      issuer: "KEONICS",
+      date: "2019",
+      credentialId: "KEONICS",
+      url: "/assets/keonics.jpg"
+    },
+    {
+      name: "Advanced Embedded Programming",
+      issuer: "IEEE SJCE & Cyprus Semiconductor",
+      date: "2019",
+      credentialId: "CYPRUS",
+      url: "/assets/aep.jpg"
+    },
   ]
 
   const skills = [

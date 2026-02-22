@@ -268,11 +268,6 @@ export default function Portfolio() {
       url: "/assets/outsill_eng_certificate.pdf",
     },
     {
-      name: "Backend Development Path",
-      issuer: "Scrimba",
-      date: "2025",
-    },
-    {
       name: "AWS DevOps Engineer Pro 2024: Mastering CI/CD Pipelines",
       issuer: "SkillSoft",
       date: "2025",
@@ -300,10 +295,18 @@ export default function Portfolio() {
       url: "https://www.mygreatlearning.com/certificate/JTWYHSGM",
     },
     {
-      name: "Front-End Web Development",
-      issuer: "Udemy",
-      date: "2021",
-      credentialId: "FE-UD",
+      name: "Data Visualization using Power BI",
+      issuer: "Great Learning",
+      date: "2023",
+      credentialId: "QFXJGRUK",
+      url: "https://www.mygreatlearning.com/certificate/QFXJGRUK",
+    },
+    {
+      name: "AWS Machine Learning Foundations",
+      issuer: "Udacity",
+      date: "2022",
+      credentialId: "RUTWWDQY",
+      url: "https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/7c8bd99c-bc0b-46f1-9b51-1812471368f9.pdf",
     },
     {
       name: "Deep Learning Specialization",
@@ -313,16 +316,10 @@ export default function Portfolio() {
       url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV",
     },
     {
-      name: "Data Structures & Algorithms",
-      issuer: "Udacity",
-      date: "2020",
-      credentialId: "DSA-UD",
-    },
-    {
       name: "IOT Programming",
       issuer: "KEONICS",
       date: "2019",
-      credentialId: "KEONICS",
+      credentialId: "HIGHEND/809",
       url: "/assets/keonics.jpg"
     },
     {
@@ -332,6 +329,20 @@ export default function Portfolio() {
       credentialId: "CYPRUS",
       url: "/assets/aep.jpg"
     },
+    {
+      name: "Semiconductor Device Modelling",
+      issuer: "SJCE",
+      date: "2019",
+      credentialId: "TEQIP-3",
+      url: "/assets/teqip.jpg"
+    },
+    {
+      name: "ROBOTIX Workshop",
+      issuer: "IEEE SJCE EDS",
+      date: "2018",
+      credentialId: "ROBOTIX",
+      url: "/assets/robotix.jpg"
+    }
   ]
 
   const skills = [

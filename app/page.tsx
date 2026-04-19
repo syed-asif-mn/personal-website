@@ -154,15 +154,18 @@ export default function Portfolio() {
 
   const experiences = [
     {
-      company: "Millenium Management",
+      company: "Millennium Management",
       role: "Software Engineering Consultant",
-      period: "September 2024 - Present",
+      period: "Sep 2025 - Present",
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Millennium_logo.svg",
       projects: [
         {
-          name: "Regulatory Reporting",
+          name: "Regulatory Microservices",
           description: [
-            "Building regulatory reporting microservices using .NET, Angular, Kafka and PostgreSQL, with AWS cloud deployment and TeamCity CI/CD integration."
+            "Designed and built T0 real-time and T1 batch reporting microservices processing ~1M trades/day using .NET, Angular, Kafka, and PostgreSQL.",
+            "Architected AWS infrastructure with CloudFormation and integrated TeamCity CI/CD pipelines.",
+            "Implemented Kibana dashboards for observability.",
+            "Integrated Claude and Qodo into GitHub workflows to streamline code reviews and boost developer productivity."
           ],
         },
       ],
@@ -170,15 +173,15 @@ export default function Portfolio() {
     {
       company: "Nasdaq",
       role: "Senior Analyst - Software Engineering",
-      period: "Dec 2024 - July 2025",
+      period: "Dec 2024 - Jul 2025",
       logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
       projects: [
         {
-          name: "Nasdaq eVestment OMNI",
+          name: "eVestment Omni",
           description: [
-            "Developed and maintained eVestment Omni and 5+ .NET microservices with SQL Server, Vue.js, and AWS.",
-            "Containerized services with Docker, reducing setup time by ~90%.",
-            "Integrated systems with Salesforce CRM for real-time data synchronization."
+            "Engineered 5+ .NET microservices using Entity Framework, SQL Server, Vue.js, and AWS.",
+            "Optimized development environment by containerizing services with Docker, reducing setup time by ~90%.",
+            "Integrated Salesforce CRM for real-time data synchronization across trading systems."
           ],
         },
       ],
@@ -186,35 +189,32 @@ export default function Portfolio() {
     {
       company: "Siemens Healthineers",
       role: "Engineer - Design & Development",
-      period: "Sept 2020 - Nov 2024",
+      period: "Sep 2020 - Nov 2024",
       logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
       projects: [
         {
           name: "OnScreen Menu Configurator",
           description: [
-            "Developed a .NET REST microservice with MySQL and Fluent NHibernate, handling 10K+ daily transactions.",
-            "Applied LINQ, SOLID principles, and design patterns across 20+ core classes to improve scalability and maintainability.",
-            "Automated server/client SSIT using .NET, Selenium, and SpecFlow (BDD), cutting manual testing by ~80% and accelerating release cycles.",
-            "Built Azure CI/CD pipelines for automated builds and nightly test runs.",
-            "Wrote Server Unit tests with MsTest, Client Unit tests using Jasmine.",
-            "Used Scaled AGILE methodologies during development."
+            "Developed .NET REST microservices with MySQL/NHibernate, processing 10K+ daily transactions.",
+            "Automated SSIT with Selenium and SpecFlow (BDD), reducing manual testing by ~80%.",
+            "Built Azure DevOps pipelines for nightly builds and automated test runs.",
+            "Wrote unit tests with MSTest and Jasmine, achieving 95% code coverage."
           ],
         },
         {
           name: "Position List Editor",
           description: [
-            "Subsystem Product Owner - Managed product backlog and refined scope in collaboration with UX/QT teams.",
-            "Implemented state management using NgRx with Angular.",
-            "Automated SSIT, increasing coverage to 95% and improving regression stability.",
-            "Proposed 3 product innovations adopted into production.",
-            "Mentored team through workshops and knowledge-sharing sessions."
+            "Implemented NgRx state management in Angular.",
+            "Acted as subsystem product owner refining backlog with UX/QT teams.",
+            "Proposed 3 product ideas adopted into production, improving usability and performance.",
+            "Mentored team members through workshops and knowledge-sharing sessions."
           ],
         },
         {
           name: "OnScreen Display",
           description: [
-            "Led the migration of legacy UI to a modular design, elevating brand consistency and user experience.",
-            "Resolved 25+ defects, significantly improving release confidence and stability.",
+            "Migrated legacy UI to modular SHUI design.",
+            "Resolved 25+ defects, boosting release confidence and stability."
           ],
         },
       ],
@@ -222,18 +222,20 @@ export default function Portfolio() {
     {
       company: "Siemens Healthineers",
       role: "Intern",
-      period: "Jan 2020 - May 2020",
+      period: "Jan 2020 – May 2020",
       logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
       projects: [
         {
-          name: "OnScreen Menu Configurator",
+          name: "Process Optimization",
           description: [
-            "Automated ~35 On Screen display subsystem workflows using C#, Python and Selenium, reducing manual testing efforts from around 2 days to 4 hours.",
+            "Automated 35+ OnScreen Display and CELoader workflows using C#, Python, and Selenium.",
+            "Reduced testing efforts from 2 days to 4 hours."
           ],
         },
       ],
     },
-  ]
+  ];
+
 
   const education = [
     {
@@ -254,6 +256,27 @@ export default function Portfolio() {
 
   const certifications = [
     {
+      name: "Claude Code 101",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "jkwjpxtwf97j",
+      url: "https://verify.skilljar.com/c/jkwjpxtwf97j",
+    },
+    {
+      name: "AI Fluency: Framework & Foundations",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "gdos6co4u9wa",
+      url: "https://verify.skilljar.com/c/gdos6co4u9wa",
+    },
+    {
+      name: "AI Capabilities and Limitations",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "tohsajjj2j7q",
+      url: "https://verify.skilljar.com/c/tohsajjj2j7q",
+    },
+    {
       name: "Generative AI Mastermind",
       issuer: "Outskill",
       date: "2025",
@@ -269,7 +292,7 @@ export default function Portfolio() {
     },
     {
       name: "AWS DevOps Engineer Pro 2024: Mastering CI/CD Pipelines",
-      issuer: "SkillSoft",
+      issuer: "Skillsoft",
       date: "2025",
       credentialId: "11104808",
       url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658",
@@ -316,18 +339,24 @@ export default function Portfolio() {
       url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV",
     },
     {
-      name: "IOT Programming",
+      name: "Data Structures and Algorithms",
+      issuer: "Udacity",
+      date: "2020",
+      credentialId: "DSA-UD",
+    },
+    {
+      name: "IoT Programming",
       issuer: "KEONICS",
       date: "2019",
-      credentialId: "HIGHEND/809",
-      url: "/assets/keonics.jpg"
+      credentialId: "KEONICS",
+      url: "/assets/keonics.jpg",
     },
     {
       name: "Advanced Embedded Programming",
-      issuer: "IEEE SJCE & Cyprus Semiconductor",
+      issuer: "IEEE SJCE & Cypress Semiconductor",
       date: "2019",
       credentialId: "CYPRUS",
-      url: "/assets/aep.jpg"
+      url: "/assets/aep.jpg",
     },
     {
       name: "Semiconductor Device Modelling",

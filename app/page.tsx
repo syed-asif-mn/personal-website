@@ -256,6 +256,27 @@ export default function Portfolio() {
 
   const certifications = [
     {
+      name: "Claude Code 101",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "jkwjpxtwf97j",
+      url: "https://verify.skilljar.com/c/jkwjpxtwf97j",
+    },
+    {
+      name: "AI Fluency: Framework & Foundations",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "gdos6co4u9wa",
+      url: "https://verify.skilljar.com/c/gdos6co4u9wa",
+    },
+    {
+      name: "AI Capabilities and Limitations",
+      issuer: "Anthropic",
+      date: "2026",
+      credentialId: "tohsajjj2j7q",
+      url: "https://verify.skilljar.com/c/tohsajjj2j7q",
+    },
+    {
       name: "Generative AI Mastermind",
       issuer: "Outskill",
       date: "2025",
@@ -276,7 +297,7 @@ export default function Portfolio() {
     },
     {
       name: "AWS DevOps Engineer Pro 2024: Mastering CI/CD Pipelines",
-      issuer: "SkillSoft",
+      issuer: "Skillsoft",
       date: "2025",
       credentialId: "11104808",
       url: "https://skillsoft.digitalbadges-eu.skillsoft.com/84d6c503-0635-410b-9ad8-5313ee3d4658",
@@ -315,26 +336,27 @@ export default function Portfolio() {
       url: "https://www.coursera.org/account/accomplishments/specialization/certificate/GDZA77AZUVRV",
     },
     {
-      name: "Data Structures & Algorithms",
+      name: "Data Structures and Algorithms",
       issuer: "Udacity",
       date: "2020",
       credentialId: "DSA-UD",
     },
     {
-      name: "IOT Programming",
+      name: "IoT Programming",
       issuer: "KEONICS",
       date: "2019",
       credentialId: "KEONICS",
-      url: "/assets/keonics.jpg"
+      url: "/assets/keonics.jpg",
     },
     {
       name: "Advanced Embedded Programming",
-      issuer: "IEEE SJCE & Cyprus Semiconductor",
+      issuer: "IEEE SJCE & Cypress Semiconductor",
       date: "2019",
       credentialId: "CYPRUS",
-      url: "/assets/aep.jpg"
+      url: "/assets/aep.jpg",
     },
-  ]
+  ];
+
 
   const skills = [
     {

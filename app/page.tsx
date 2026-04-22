@@ -96,6 +96,7 @@ export default function Portfolio() {
         "Streamlines daily reconciliation, saving 2-3 hours of manual effort and improving accuracy for treasury teams.",
       image: "/assets/glean.svg",
     },
+
     {
       title: "Explainable AI with H2O",
       description:
@@ -104,6 +105,15 @@ export default function Portfolio() {
       impact: "Demonstrated transparent AI modeling techniques for real-world forecasting use cases.",
       image: "/assets/bike.svg",
       link: "https://www.kaggle.com/code/syedasifmn/explainable-ai-using-h2o",
+    },
+    {
+      title: "InsightGen - Developer Knowledge Search",
+      description:
+        "An AI-powered search engine that indexes and retrieves contextual information from GitHub, JIRA, and Confluence pages. It enables developers to quickly locate code snippets, tickets, and documentation without manual navigation.",
+      tech: ["Copilot Studio"],
+      impact:
+        "Reduced developer effort by cutting search time for project information and documentation, improving productivity across teams.",
+      image: "/assets/insight.svg",
     },
     {
       title: "Voter CRM",

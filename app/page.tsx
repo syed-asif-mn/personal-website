@@ -266,6 +266,13 @@ export default function Portfolio() {
 
   const certifications = [
     {
+      name: "AWS AI Practitioner Challenge",
+      issuer: "Udacity",
+      date: "2026",
+      credentialId: "632c2d1cce7f",
+      url: "https://www.udacity.com/certificate/e/ae977360-327f-11f1-9a23-632c2d1cce7f",
+    },
+    {
       name: "Claude Code 101",
       issuer: "Anthropic",
       date: "2026",

@@ -439,7 +439,7 @@ export default function Portfolio() {
       items: [
         { name: "PostgreSQL", level: "Professional" },
         { name: "SQL Server", level: "Professional" },
-        { name: "MongoDB", level: "Intermediate" },
+        { name: "Snowflake", level: "Intermediate" },
       ],
     },
     {

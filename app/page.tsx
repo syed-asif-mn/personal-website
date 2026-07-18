@@ -439,7 +439,7 @@ export default function Portfolio() {
       items: [
         { name: "PostgreSQL", level: "Professional" },
         { name: "SQL Server", level: "Professional" },
-        { name: "MongoDB", level: "Intermediate" },
+        { name: "Snowflake", level: "Intermediate" },
       ],
     },
     {
@@ -599,16 +599,15 @@ export default function Portfolio() {
                 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                Building accessible, human-centered products at the intersection of
-                technology, data, and design.
+                Building scalable, performant, and human-centered products at the intersection of technology, data, and design.
               </h3>
 
               <p
                 className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                With 5+ years of hands-on experience in cloud-native and enterprise-grade
-                solutions, powered by .NET, Angular, Azure, SQL Server and AWS.
+                With 6+ years of experience delivering cloud-native and enterprise-grade
+                solutions powered by .NET, Angular, Azure, SQL, and AWS.
               </p>
 
               <div

@@ -615,12 +615,12 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <p
+              <h4
                 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
               >
                 Building scalable, performant, and human-centered products at the intersection of technology, data, and design.
-              </p>
+              </h4>
 
               <p
                 className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"

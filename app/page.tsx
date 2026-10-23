@@ -163,89 +163,95 @@ export default function Portfolio() {
   ]
 
   const experiences = [
-    {
-      company: "Millennium Management",
-      role: "Software Engineering Consultant",
-      period: "Sep 2025 - Present",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Millennium_logo.svg",
-      projects: [
-        {
-          name: "Regulatory Microservices",
-          description: [
-            "Designed and built T0 real-time and T1 batch reporting microservices processing ~1M trades/day using .NET, Angular, Kafka, and PostgreSQL.",
-            "Architected AWS infrastructure with CloudFormation and integrated TeamCity CI/CD pipelines.",
-            "Implemented Kibana dashboards for observability.",
-            "Integrated Claude and Qodo into GitHub workflows to streamline code reviews and boost developer productivity."
-          ],
-        },
-      ],
-    },
-    {
-      company: "Nasdaq",
-      role: "Senior Analyst - Software Engineering",
-      period: "Dec 2024 - Jul 2025",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
-      projects: [
-        {
-          name: "eVestment Omni",
-          description: [
-            "Engineered 5+ .NET microservices using Entity Framework, SQL Server, Vue.js, and AWS.",
-            "Optimized development environment by containerizing services with Docker, reducing setup time by ~90%.",
-            "Integrated Salesforce CRM for real-time data synchronization across trading systems."
-          ],
-        },
-      ],
-    },
-    {
-      company: "Siemens Healthineers",
-      role: "Engineer - Design & Development",
-      period: "Sep 2020 - Nov 2024",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
-      projects: [
-        {
-          name: "OnScreen Menu Configurator",
-          description: [
-            "Developed .NET REST microservices with MySQL/NHibernate, processing 10K+ daily transactions.",
-            "Automated SSIT with Selenium and SpecFlow (BDD), reducing manual testing by ~80%.",
-            "Built Azure DevOps pipelines for nightly builds and automated test runs.",
-            "Wrote unit tests with MSTest and Jasmine, achieving 95% code coverage."
-          ],
-        },
-        {
-          name: "Position List Editor",
-          description: [
-            "Implemented NgRx state management in Angular.",
-            "Acted as subsystem product owner refining backlog with UX/QT teams.",
-            "Proposed 3 product ideas adopted into production, improving usability and performance.",
-            "Mentored team members through workshops and knowledge-sharing sessions."
-          ],
-        },
-        {
-          name: "OnScreen Display",
-          description: [
-            "Migrated legacy UI to modular SHUI design.",
-            "Resolved 25+ defects, boosting release confidence and stability."
-          ],
-        },
-      ],
-    },
-    {
-      company: "Siemens Healthineers",
-      role: "Intern",
-      period: "Jan 2020 – May 2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
-      projects: [
-        {
-          name: "Process Optimization",
-          description: [
-            "Automated 35+ OnScreen Display and CELoader workflows using C#, Python, and Selenium.",
-            "Reduced testing efforts from 2 days to 4 hours."
-          ],
-        },
-      ],
-    },
-  ];
+  {
+    company: "Millennium Management",
+    role: "Software Engineering Consultant (via Drepp)",
+    period: "Sep 2025 - Present",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Millennium_logo.svg",
+    projects: [
+      {
+        name: "Regulatory Reporting Platform",
+        description: [
+          "Architected T0 real-time and T1 batch reporting microservices processing 25M+ trades per day using .NET, Angular, Kafka, PostgreSQL, Snowflake, and Redis.",
+          "Optimized Snowflake clustering strategies and query execution plans, reducing reporting query latency by 83% from 60 seconds to 10 seconds.",
+          "Engineered a high-throughput transaction import/export platform supporting 1M-record transfers in under one minute.",
+          "Migrated approximately 10 TB/day of log data from Athena to Snowflake, consolidating analytics workflows and reducing operational costs.",
+          "Built Angular-based interfaces for MiFID and MAS regulatory reporting workflows.",
+          "Streamlined TeamCity and Octopus CI/CD pipelines and implemented Kibana dashboards with Slack alerting for operational monitoring.",
+          "Integrated Claude and Qodo into GitHub workflows for AI-assisted code reviews, driving adoption across 15+ repositories."
+        ]
+      }
+    ]
+  },
 
+  {
+    company: "Nasdaq",
+    role: "Senior Analyst - Software Engineering",
+    period: "Dec 2024 - Jul 2025",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/NASDAQ_Logo.svg",
+    projects: [
+      {
+        name: "eVestment Platform",
+        description: [
+          "Engineered and enhanced 7+ distributed .NET microservices within the eVestment platform using SQL Server, AWS, and Vue.js.",
+          "Designed AWS-backed data processing pipelines and SQL Server workflows to automate product-data population and completeness tracking across institutional investment databases.",
+          "Integrated Salesforce CRM with Omni data pipelines, enabling seamless synchronization across business units.",
+          "Accelerated data enrichment workflows by approximately 80% through automation and improved system integration."
+        ]
+      }
+    ]
+  },
+
+  {
+    company: "Siemens Healthineers",
+    role: "Engineer - Design & Development",
+    period: "Sep 2020 - Nov 2024",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
+    projects: [
+      {
+        name: "On-Screen Display Services",
+        description: [
+          "Developed and maintained .NET Core REST microservices with MySQL and NHibernate supporting 10,000+ daily hospital workflows.",
+          "Modernized and enhanced clinical imaging workflows through scalable backend services and API development.",
+          "Automated testing using Selenium, SpecFlow, MSTest, and Jasmine, achieving 99% line coverage.",
+          "Built Azure DevOps CI/CD pipelines with automated quality gates and Azure Functions to streamline release management and operational reporting."
+        ]
+      },
+      {
+        name: "Position List Editor",
+        description: [
+          "Owned the Position List Editor subsystem and collaborated with cross-functional teams to drive feature delivery.",
+          "Delivered three product improvements that were adopted into production and enhanced usability for clinical users.",
+          "Acted as technical lead for subsystem enhancements, backlog refinement, and stakeholder discussions."
+        ]
+      },
+      {
+        name: "Analytics & Reporting",
+        description: [
+          "Developed Power BI dashboards and Azure Analytics Views adopted by 15+ engineering and product teams.",
+          "Enabled data-driven decision making through operational and product-performance reporting.",
+          "Attained Level 3 certification in the Code, Test, and System Craftsmanship program, recognizing advanced engineering competency."
+        ]
+      }
+    ]
+  },
+
+  {
+    company: "Siemens Healthineers",
+    role: "Intern",
+    period: "Jan 2020 - May 2020",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/Siemens_Healthineers_logo.svg",
+    projects: [
+      {
+        name: "Clinical Workflow Automation",
+        description: [
+          "Automated 35+ OnScreen Display and CELoader clinical workflows using C#, Python, and Selenium.",
+          "Reduced testing efforts from 2 days to approximately 3 hours through end-to-end automation."
+        ]
+      }
+    ]
+  }
+];
 
   const education = [
     {
@@ -265,6 +271,20 @@ export default function Portfolio() {
   ]
 
   const certifications = [
+    {
+      name: "Future AWS Agentic AI Business Professional",
+      issuer: "Udacity",
+      date: "2026",
+      credentialId: "4f3b44b2db18",
+      url: "https://www.udacity.com/certificate/e/96aeaada-9011-11f1-80ba-4f3b44b2db18",
+    },
+    {
+      name: "Project Completion Badge - Revenue Intelligence Dashboard",
+      issuer: "AWS AI & ML Scholars Program",
+      date: "2026",
+      credentialId: "ed5b8755",
+      url: "https://cdn.getblueshift.com/bee/images/ed5b8755-0989-4944-9ca5-287bb68e4a22/ND2726%20-%20Project%201%20-%20Revenue%20Intelligence%20Dashboard.png",
+    },
     {
       name: "AWS AI Practitioner Challenge",
       issuer: "Udacity",
@@ -430,7 +450,7 @@ export default function Portfolio() {
     {
       category: "Web Development",
       items: [
-        { name: "Angular (v8 - v20)", level: "Professional" },
+        { name: "Angular", level: "Professional" },
         { name: "Vue.js", level: "Intermediate" },
       ],
     },
@@ -439,7 +459,7 @@ export default function Portfolio() {
       items: [
         { name: "PostgreSQL", level: "Professional" },
         { name: "SQL Server", level: "Professional" },
-        { name: "Snowflake", level: "Intermediate" },
+        { name: "Snowflake", level: "Professional" },
       ],
     },
     {
@@ -461,7 +481,7 @@ export default function Portfolio() {
       category: "Testing & Quality Assurance",
       items: [
         { name: "Test-Driven Development", level: "Professional" },
-        { name: "BDD (SpecFlow)", level: "Professional" },
+        { name: "Specflow", level: "Professional" },
         { name: "Selenium", level: "Professional" },
         { name: "MSTest", level: "Professional" },
         { name: "Jasmine", level: "Professional" },
@@ -595,18 +615,18 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <h3
+              <p
                 className={`text-subtitle font-light mb-responsive ${isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
               >
                 Building scalable, performant, and human-centered products at the intersection of technology, data, and design.
-              </h3>
+              </p>
 
               <p
                 className={`mb-responsive font-light text-body ${isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                With 6+ years of experience delivering cloud-native and enterprise-grade
+                With 6+ years of professional experience delivering cloud-native and enterprise-grade
                 solutions powered by .NET, Angular, Azure, SQL, and AWS.
               </p>
 
